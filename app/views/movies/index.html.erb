@@ -6,9 +6,16 @@
   </div>
   <div class="row movies-container">
     <% @movies.each do |movie| %>
-      <div class="col-md-4 movie-tile">
-        <%= movie.title %>
-      </div>
+      <%= link_to movie do %>
+        <div class="col-md-4 movie-thumbnail">
+          <div class="movie-thumbnail-image">
+            <div class="darken">
+              <%= image_tag movie.image, alt: movie.title, class: "movie-image" %>
+              <h4><%= movie.title %></h4>
+            </div>
+          </div>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>

@@ -78,7 +78,7 @@ movie_array = [
     genre: "Animation",
     rating: "G",
     synopsis: "In the distant future, a small waste collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind.",
-    image: "https://www.movieposter.com/posters/archive/main/83/MPW-41812"
+    image: "https://caragaleblog.files.wordpress.com/2015/06/wall-e.jpg"
   },
   {
     title: "The Lord of the Rings: The Return of the King",
@@ -88,7 +88,7 @@ movie_array = [
     genre: "Adventure",
     rating: "PG-13",
     synopsis: "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
-    image: "http://img3.wikia.nocookie.net/__cb20150203041337/lotr/images/b/ba/Rie.jpg"
+    image: "http://cdn.wmgecom.com/production/media/catalog/product/cache/292/image/9df78eab33525d08d6e5fb8d27136e95/r/e/returnst.jpg"
   },
   {
     title: "Pi",
@@ -98,7 +98,7 @@ movie_array = [
     genre: "Drama",
     rating: "R",
     synopsis: "A paranoid mathematician searches for a key number that will unlock the universal patterns found in nature.",
-    image: "http://images.moviepostershop.com/pi-movie-poster-1998-1020474533.jpg"
+    image: "http://img10.deviantart.net/c610/i/2012/214/4/8/pi_movie_poster_by_lafar88-d59j446.jpg"
   }
 ]
 
