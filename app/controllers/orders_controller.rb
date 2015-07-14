@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :set_order_and_movie, only: [:show, :edit, :update]
+  before_action :set_order_and_movie, only: [:show, :edit, :update, :destroy]
 
   def index
     @orders = Order.all
@@ -11,6 +11,8 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(order_params)
+    @order.email = "placeholder@example.com"
+    @order.credit_card = "0000000000000000"
 
     if @order.save
       redirect_to edit_order_path(@order)
@@ -23,6 +25,8 @@ class OrdersController < ApplicationController
   end
 
   def edit
+    @order.email = ""
+    @order.credit_card = ""
   end
 
   def update
@@ -33,6 +37,11 @@ class OrdersController < ApplicationController
     end
   end
 
+  def destroy
+    @order.destroy
+    redirect_to movies_path, notice: 'Your order has been cancelled'
+  end
+
   private
     def set_order_and_movie
       @order = Order.find(params[:id])
@@ -40,6 +49,8 @@ class OrdersController < ApplicationController
     end
 
     def order_params
-      params.require(:order).permit(:email, :credit_card, :tickets, :theater_id, :showtime_id, :movie_id)
+      params.require(:order).permit(:email, :credit_card, :card_expiration_month, :card_expiration_year,
+                                    :tickets, :street_address, :city, :state, :zip_code, :country,
+                                    :theater_id, :showtime_id, :movie_id)
     end
 end
