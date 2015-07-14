@@ -3,9 +3,25 @@
     <%= render "shared/errors", resource: order %>
   <% end %>
 
-  <%= f.label 'showtimes' %>
-  <%= f.select 'showtime', options_from_collection_for_select(movie.theater.showtimes,
-                                                              "start_time", "start_time") %>
+  <div class="form-group">
+    <%= f.label 'How many tickets?' %>
+    <%= f.select :tickets, [], {}, { class: "form-control" } do %>
+      <% 1...(movie.theater.capacity).times do |number| %>
+        <%= content_tag :option, (number + 1), value: (number + 1) %>
+      <% end %>
+    <% end %>
+  </div>
 
-  <%= f.submit "Purchase tickets", class: "btn btn-primary" %>
+  <div class="form-group">
+    <%= f.label 'Which showtime?' %>
+    <%= f.select :showtime_id, options_from_collection_for_select(movie.theater.showtimes,
+                                                               "id", "start_time"),
+                                                               {}, { class: "form-control" } %>
+  </div>
+
+  <%= f.hidden_field :theater_id, value: movie.theater.id %>
+
+  <div class="form-group pull-right">
+    <%= f.submit "Order tickets", class: "btn btn-primary" %>
+  </div>
 <% end %>
