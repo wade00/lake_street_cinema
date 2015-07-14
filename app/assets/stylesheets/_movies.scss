@@ -9,7 +9,7 @@
   }
 }
 
-.movie-thumbnail-image {
+.movie-thumbnail-image-index {
   background: rgba(0,0,0,0.9);
   position: relative;
   width: 100%;
@@ -27,3 +27,12 @@
 }
 
 /* Show Page */
+
+.movie-thumbnail-image-show {
+  padding: none;
+  overflow: hidden;
+  height: 400px;
+  img {
+    height: 100%;
+  }
+}

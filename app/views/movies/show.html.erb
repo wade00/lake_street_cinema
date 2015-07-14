@@ -1,1 +1,24 @@
-<p><%= @movie.title %></p>
+<div class="container">
+  <div class="row header">
+    <div class="col-xs-12 text-center">
+      <h1>Lake Street Cinema</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3 movie-thumbnail-image-show">
+      <%= image_tag @movie.image %>
+    </div>
+    <div class="col-md-8">
+      <h3><%= @movie.title %></h3>
+      <p>
+        Director: <%= @movie.director %> | Genre: <%= @movie.genre %> | Runtime: <%= @movie.runtime %> min
+      </p>
+      <p><%= @movie.synopsis %></p>
+
+      <hr />
+
+      <p>Render tickets form</p>
+    </div>
+  </div>
+
+</div>
