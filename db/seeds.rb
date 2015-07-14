@@ -143,8 +143,8 @@ theater_array = [
 
 theater_array.each do |theater_hash|
   theater = Theater.new
-  theater.title = theater_hash[:title]
-  theater.year = theater_hash[:year]
+  theater.number = theater_hash[:number]
+  theater.capacity = theater_hash[:capacity]
   theater.save
 end
 

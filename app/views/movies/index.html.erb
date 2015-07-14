@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row header">
+    <div class="col-xs-12 text-center">
+      <h1>Lake Street Cinema</h1>
+    </div>
+  </div>
+  <div class="row movies-container">
+    <% @movies.each do |movie| %>
+      <div class="col-md-4 movie-tile">
+        <%= movie.title %>
+      </div>
+    <% end %>
+  </div>
+</div>
