@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email,: MyString
+  credit_card,: MyString
+  movie: 
+  theater: 
+  showtime_id: 
+
+two:
+  email,: MyString
+  credit_card,: MyString
+  movie: 
+  theater: 
+  showtime_id: 
