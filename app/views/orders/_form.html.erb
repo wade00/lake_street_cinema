@@ -1,0 +1,11 @@
+<%= form_for order do |f| %>
+  <% if order.errors.any? %>
+    <%= render "shared/errors", resource: order %>
+  <% end %>
+
+  <%= f.label 'showtimes' %>
+  <%= f.select 'showtime', options_from_collection_for_select(movie.theater.showtimes,
+                                                              "start_time", "start_time") %>
+
+  <%= f.submit "Purchase tickets", class: "btn btn-primary" %>
+<% end %>
