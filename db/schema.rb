@@ -47,10 +47,12 @@ ActiveRecord::Schema.define(version: 20150714142111) do
   create_table "showtimes", force: :cascade do |t|
     t.time     "start_time"
     t.integer  "theater_id"
+    t.integer  "movie_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_index "showtimes", ["movie_id"], name: "index_showtimes_on_movie_id", using: :btree
   add_index "showtimes", ["theater_id"], name: "index_showtimes_on_theater_id", using: :btree
 
   create_table "theaters", force: :cascade do |t|
@@ -75,6 +77,7 @@ ActiveRecord::Schema.define(version: 20150714142111) do
   add_foreign_key "movies", "theaters"
   add_foreign_key "orders", "showtimes"
   add_foreign_key "orders", "theaters"
+  add_foreign_key "showtimes", "movies"
   add_foreign_key "showtimes", "theaters"
   add_foreign_key "tickets", "orders"
   add_foreign_key "tickets", "showtimes"
