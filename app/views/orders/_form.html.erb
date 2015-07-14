@@ -20,6 +20,7 @@
   </div>
 
   <%= f.hidden_field :theater_id, value: movie.theater.id %>
+  <%= f.hidden_field :movie_id, value: movie.id %>
 
   <div class="form-group pull-right">
     <%= f.submit "Order tickets", class: "btn btn-primary" %>

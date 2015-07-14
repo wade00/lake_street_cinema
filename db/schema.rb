@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150714175623) do
+ActiveRecord::Schema.define(version: 20150714190201) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,8 +40,10 @@ ActiveRecord::Schema.define(version: 20150714175623) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "tickets"
+    t.integer  "movie_id"
   end
 
+  add_index "orders", ["movie_id"], name: "index_orders_on_movie_id", using: :btree
   add_index "orders", ["showtime_id"], name: "index_orders_on_showtime_id", using: :btree
   add_index "orders", ["theater_id"], name: "index_orders_on_theater_id", using: :btree
 
@@ -76,6 +78,7 @@ ActiveRecord::Schema.define(version: 20150714175623) do
   add_index "tickets", ["theater_id"], name: "index_tickets_on_theater_id", using: :btree
 
   add_foreign_key "movies", "theaters"
+  add_foreign_key "orders", "movies"
   add_foreign_key "orders", "showtimes"
   add_foreign_key "orders", "theaters"
   add_foreign_key "showtimes", "movies"

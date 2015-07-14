@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-xs-12">
+    <p>
+      <% if (@order.tickets).to_i > 1 %>
+        <%= @order.tickets %> tickets for
+      <% else %>
+        <%= @order.tickets %> ticket for
+      <% end %>
+      <em><%= @movie.title %></em>
+    </p>
+    <p>
+      Theater number <strong><%= @order.theater.number %></strong> at <%= @order.showtime.start_time %>
+    </p>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="col-xs-12 text-right">
+    <p>Subtotal: $40.00</p>
+    <p>Tax: $4.00</p>
+    <p>Total: $44.00</p>
+  </div>
+</div>

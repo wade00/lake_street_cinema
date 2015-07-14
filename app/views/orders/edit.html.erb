@@ -1,6 +1,35 @@
-<p>Please review your order before purchasing:</p>
-<p>
-  <%= @order.tickets %> tickets for
-  <%= @order.movie %> in theater number
-  <%= @order.theater %> at <%= @order.showtime.start_time %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Please review your order before purchasing:</h3>
+    </div>
+  </div>
+
+  <hr />
+
+  <%= render 'order_summary', order: @order, movie: @movie %>
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 col-xs-12">
+      <div class="text-center">
+        <h4>Please enter your email and credit card info for billing:</h4>
+      </div>
+
+      <%= form_for @order do |f| %>
+        <div class="form-group">
+          <%= f.label :email, class: "control-label" %>
+          <%= f.email_field :email, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :credit_card, "Credit Card", class: "control-label" %>
+          <%= f.text_field :credit_card, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.submit "Place order", class: "btn btn-primary pull-right" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

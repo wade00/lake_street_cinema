@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: [:show, :edit]
+  before_action :set_order_and_movie, only: [:show, :edit, :update]
 
   def index
     @orders = Order.all
@@ -25,12 +25,21 @@ class OrdersController < ApplicationController
   def edit
   end
 
+  def update
+    if @order.update(order_params)
+      redirect_to @order, notice: 'Your purchase was successful.'
+    else
+      render 'edit'
+    end
+  end
+
   private
-    def set_order
+    def set_order_and_movie
       @order = Order.find(params[:id])
+      @movie = Movie.find(@order.movie_id)
     end
 
     def order_params
-      params.require(:order).permit(:email, :credit_card, :tickets, :theater_id, :showtime_id)
+      params.require(:order).permit(:email, :credit_card, :tickets, :theater_id, :showtime_id, :movie_id)
     end
 end
