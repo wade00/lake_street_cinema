@@ -9,9 +9,7 @@
       <em><%= @movie.title %></em>
     </p>
     <p>
-      <strong>Theater number <%= @order.theater.number %></strong> at
-      <%= @order.showtime.start_time.hour < 12 ? "#{@order.showtime.start_time.strftime("%I:%M")} am" :
-                                                 "#{@order.showtime.start_time.strftime("%I:%M")} pm" %>
+      <strong>Theater number <%= @order.theater.number %></strong> at <%= to_strftime(@order.showtime) %>
     </p>
   </div>
 </div>

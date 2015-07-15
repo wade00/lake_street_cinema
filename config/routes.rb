@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  resources :movies
+  resources :movies do
+    resources :showtimes, only: [:show]
+  end
   resources :orders
 end

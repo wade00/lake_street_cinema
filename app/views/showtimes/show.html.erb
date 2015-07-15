@@ -4,7 +4,9 @@
       <%= image_tag @movie.image %>
     </div>
     <div class="col-md-8">
-      <h3><%= @movie.title %></h3>
+      <h3>
+        <%= to_strftime(@showtime) %> showing for <%= @movie.title %>
+      </h3>
       <p>
         Director: <%= @movie.director %> | Genre: <%= @movie.genre %> | Runtime: <%= @movie.runtime %> min
       </p>

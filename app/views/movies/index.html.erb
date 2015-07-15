@@ -1,24 +1,28 @@
 <div class="container">
-  <div class="row header">
-    <div class="col-xs-12 text-center">
-      <h1>Lake Street Cinema</h1>
-    </div>
-    <div class="col-xs-12 text-center">
-      <h2>Now Showing:</h2>
-    </div>
+  <div class="row col-xs-12 text-center">
+    <h2>Now Showing:</h2>
   </div>
   <div class="row movies-container">
     <% @movies.each do |movie| %>
-      <%= link_to movie do %>
-        <div class="col-md-4 movie-thumbnail">
-          <div class="movie-thumbnail-image-index">
-            <div class="darken">
-              <%= image_tag movie.image, alt: movie.title, class: "movie-image" %>
-              <h4><%= movie.title %></h4>
-            </div>
+      <div class="col-md-4 movie-thumbnail">
+        <div class="movie-thumbnail-image-index text-center">
+          <%= image_tag movie.image, alt: movie.title, class: "movie-image" %>
+          <div class="movie-showtime-info">
+            <h4><%= movie.title %></h4>
+            <p>Showtimes</p>
+            <% movie.showtimes.each do |showtime| %>
+              <div class="col-xs-4">
+                <p>
+                  <%= link_to movie_showtime_path(movie, showtime) do %>
+                    <%= to_strftime(showtime) %>
+                  <% end %>
+                </p>
+              </div>
+            <% end %>
           </div>
         </div>
-      <% end %>
+      </div>
     <% end %>
   </div>
 </div>
+

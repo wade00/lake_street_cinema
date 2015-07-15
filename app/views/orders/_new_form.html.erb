@@ -3,8 +3,7 @@
     <%= render "shared/errors", resource: order %>
   <% end %>
 
-  <div class="form-group">
-    <%= f.label 'How many tickets?' %>
+  <div class="form-group col-md-5">
     <%= f.select :tickets, [], {}, { class: "form-control" } do %>
       <% movie.theater.capacity.times do |number| %>
         <%= content_tag :option, (number + 1), value: (number + 1) %>
@@ -12,23 +11,11 @@
     <% end %>
   </div>
 
-  <div class="form-group">
-    <%= f.label 'Which showtime?' %>
-    <%= f.select :showtime_id, [], {}, { class: "form-control" } do %>
-      <% movie.theater.showtimes.each do |showtime| %>
-        <%= content_tag :option,
-                        showtime.start_time.hour < 12 ?
-                        "#{showtime.start_time.strftime("%I:%M")} am" :
-                        "#{showtime.start_time.strftime("%I:%M")} pm",
-                        value: showtime.id %>
-      <% end %>
-    <% end %>
-  </div>
-
   <%= f.hidden_field :theater_id, value: movie.theater.id %>
   <%= f.hidden_field :movie_id, value: movie.id %>
+  <%= f.hidden_field :showtime, value: params[:id] %>
 
-  <div class="form-group pull-right">
+  <div class="form-group col-md-4">
     <%= f.submit "Order tickets", class: "btn btn-primary" %>
   </div>
 <% end %>

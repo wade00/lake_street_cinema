@@ -83,7 +83,7 @@ movie_array = [
     genre: "Adventure",
     rating: "PG",
     synopsis: "A young boy accidentally joins a band of dwarves as they jump from era to era looking for treasure to steal.",
-    image: "http://images.fandango.com/MDCsite/images/featured/201412/TimeBandits_quad_UK_Gilliam-1.jpg",
+    image: "http://i.jeded.com/i/time-bandits.15611.jpg",
     theater: theater2
   },
   {
@@ -116,7 +116,7 @@ movie_array = [
     genre: "Drama",
     rating: "R",
     synopsis: "With his wife's disappearance having become the focus of an intense media circus, a man sees the spotlight turned on him when it's suspected that he may not be innocent.",
-    image: "https://maryloudriedger2.files.wordpress.com/2014/10/gone-girl-2014-film-poster.jpg",
+    image: "https://sinekdoks.files.wordpress.com/2015/01/poster-gg.jpg",
     theater: theater5
   },
   {
@@ -192,213 +192,275 @@ end
 
 puts "There are now #{Movie.count} movies in the database."
 
+movie1  = Movie.find_by(title: "Jurassic Park")
+movie2  = Movie.find_by(title: "Time Bandits")
+movie3  = Movie.find_by(title: "Wayne's World")
+movie4  = Movie.find_by(title: "Rock 'n' Roll High School")
+movie5  = Movie.find_by(title: "Gone Girl")
+movie6  = Movie.find_by(title: "Brazil")
+movie7  = Movie.find_by(title: "Up")
+movie8  = Movie.find_by(title: "WALL-E")
+movie9  = Movie.find_by(title: "The Lord of the Rings: The Return of the King")
+movie10 = Movie.find_by(title: "Pi")
+
 # Showtimes
 showtimes_array = [
   {
     theater: theater1,
+    movie: movie1,
     start_time: "10:00"
   },
   {
     theater: theater1,
+    movie: movie1,
     start_time: "13:00"
   },
   {
     theater: theater1,
+    movie: movie1,
     start_time: "16:00"
   },
   {
     theater: theater1,
+    movie: movie1,
     start_time: "19:00"
   },
   {
     theater: theater1,
+    movie: movie1,
     start_time: "22:00"
   },
   {
     theater: theater2,
-    start_time: "10:00"
+    movie: movie2,
+    start_time: "10:30"
   },
   {
     theater: theater2,
-    start_time: "13:00"
+    movie: movie2,
+    start_time: "13:30"
   },
   {
     theater: theater2,
-    start_time: "16:00"
+    movie: movie2,
+    start_time: "16:30"
   },
   {
     theater: theater2,
-    start_time: "19:00"
+    movie: movie2,
+    start_time: "19:30"
   },
   {
     theater: theater2,
-    start_time: "22:00"
+    movie: movie2,
+    start_time: "22:30"
   },
   {
     theater: theater3,
+    movie: movie3,
     start_time: "10:00"
   },
   {
     theater: theater3,
+    movie: movie3,
     start_time: "13:00"
   },
   {
     theater: theater3,
+    movie: movie3,
     start_time: "16:00"
   },
   {
     theater: theater3,
+    movie: movie3,
     start_time: "19:00"
   },
   {
     theater: theater3,
+    movie: movie3,
     start_time: "22:00"
   },
     {
     theater: theater4,
-    start_time: "10:00"
+    movie: movie4,
+    start_time: "10:30"
   },
   {
     theater: theater4,
-    start_time: "13:00"
+    movie: movie4,
+    start_time: "13:30"
   },
   {
     theater: theater4,
-    start_time: "16:00"
+    movie: movie4,
+    start_time: "16:30"
   },
   {
     theater: theater4,
-    start_time: "19:00"
+    movie: movie4,
+    start_time: "19:30"
   },
   {
     theater: theater4,
-    start_time: "22:00"
+    movie: movie4,
+    start_time: "22:30"
   },
     {
     theater: theater5,
+    movie: movie5,
     start_time: "10:00"
   },
   {
     theater: theater5,
+    movie: movie5,
     start_time: "13:00"
   },
   {
     theater: theater5,
+    movie: movie5,
     start_time: "16:00"
   },
   {
     theater: theater5,
+    movie: movie5,
     start_time: "19:00"
   },
   {
     theater: theater5,
+    movie: movie5,
     start_time: "22:00"
   },
     {
     theater: theater6,
-    start_time: "10:00"
+    movie: movie6,
+    start_time: "10:30"
   },
   {
     theater: theater6,
-    start_time: "13:00"
+    movie: movie6,
+    start_time: "13:30"
   },
   {
     theater: theater6,
-    start_time: "16:00"
+    movie: movie6,
+    start_time: "16:30"
   },
   {
     theater: theater6,
-    start_time: "19:00"
+    movie: movie6,
+    start_time: "19:30"
   },
   {
     theater: theater6,
-    start_time: "22:00"
+    movie: movie6,
+    start_time: "22:30"
   },
     {
     theater: theater7,
+    movie: movie7,
     start_time: "10:00"
   },
   {
     theater: theater7,
+    movie: movie7,
     start_time: "13:00"
   },
   {
     theater: theater7,
+    movie: movie7,
     start_time: "16:00"
   },
   {
     theater: theater7,
+    movie: movie7,
     start_time: "19:00"
   },
   {
     theater: theater7,
+    movie: movie7,
     start_time: "22:00"
   },
     {
     theater: theater8,
-    start_time: "10:00"
+    movie: movie8,
+    start_time: "10:30"
   },
   {
     theater: theater8,
-    start_time: "13:00"
+    movie: movie8,
+    start_time: "13:30"
   },
   {
     theater: theater8,
-    start_time: "16:00"
+    movie: movie8,
+    start_time: "16:30"
   },
   {
     theater: theater8,
-    start_time: "19:00"
+    movie: movie8,
+    start_time: "19:30"
   },
   {
     theater: theater8,
-    start_time: "22:00"
+    movie: movie8,
+    start_time: "22:30"
   },
     {
     theater: theater9,
+    movie: movie9,
     start_time: "10:00"
   },
   {
     theater: theater9,
+    movie: movie9,
     start_time: "13:00"
   },
   {
     theater: theater9,
+    movie: movie9,
     start_time: "16:00"
   },
   {
     theater: theater9,
+    movie: movie9,
     start_time: "19:00"
   },
   {
     theater: theater9,
+    movie: movie9,
     start_time: "22:00"
   },
     {
     theater: theater10,
-    start_time: "10:00"
+    movie: movie10,
+    start_time: "10:30"
   },
   {
     theater: theater10,
-    start_time: "13:00"
+    movie: movie10,
+    start_time: "13:30"
   },
   {
     theater: theater10,
-    start_time: "16:00"
+    movie: movie10,
+    start_time: "16:30"
   },
   {
     theater: theater10,
-    start_time: "19:00"
+    movie: movie10,
+    start_time: "19:30"
   },
   {
     theater: theater10,
-    start_time: "22:00"
+    movie: movie10,
+    start_time: "22:30"
   }
 ]
 
 showtimes_array.each do |showtime_hash|
   showtime = Showtime.new
   showtime.theater = showtime_hash[:theater]
+  showtime.movie = showtime_hash[:movie]
   showtime.start_time = showtime_hash[:start_time]
   showtime.save
 end
