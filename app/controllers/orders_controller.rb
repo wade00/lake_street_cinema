@@ -39,6 +39,10 @@ class OrdersController < ApplicationController
     redirect_to movies_path, notice: 'Your order has been cancelled'
   end
 
+  def review
+    @movie = Movie.find(params[:id])
+  end
+
   private
     def set_order_and_movie
       @order = Order.find(params[:id])
