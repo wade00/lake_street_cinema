@@ -1,0 +1,26 @@
+Hi <%= @order.name %>! Let the countdown 'til showtime begin...
+----------------------------------------------------------------
+
+Remember, tickets are will call, but you want to skip the line just print this receipt out and give it to the ticket taker.
+
+----------------------------------------------------------------
+
+Your order information:
+----------------------------------------------------------------
+
+<% if (@order.tickets).to_i > 1 %>
+  <%= @order.tickets %> tickets for
+<% else %>
+  <%= @order.tickets %> ticket for
+<% end %>
+<%= @order.movie.title %>
+Theater number <%= @order.theater.number %> at <strong><%= to_strftime(@order.showtime) %>
+<%= number_to_currency(ticket_price(@order.showtime)) %> each
+----------------------------------------------------------------
+
+Subtotal: <%= number_to_currency(order_subtotal(@order.showtime, @order.tickets)) %>
+Tax: <%= number_to_currency(order_tax(@order.showtime, @order.tickets)) %>
+Total: <%= number_to_currency(order_total(@order.showtime, @order.tickets)) %>
+----------------------------------------------------------------
+
+Thank you for your purchase and enjoy the show!

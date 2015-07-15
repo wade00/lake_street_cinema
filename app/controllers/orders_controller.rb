@@ -28,6 +28,7 @@ class OrdersController < ApplicationController
   def update
     if @order.update(order_params)
       redirect_to @order, notice: 'Your purchase was successful.'
+      OrderMailer.send_receipt(@order, @order.email).deliver_now
     else
       render 'edit'
     end
