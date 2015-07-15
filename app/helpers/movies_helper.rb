@@ -27,6 +27,3 @@ module MoviesHelper
     end
   end
 end
-
-
-# if verify_age is true, then add a field to enter age in the new order form. if time.now - the calender date selected is > 13 for PG-13 then give error message. If it's > 17 for R also give error message.

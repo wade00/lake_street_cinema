@@ -3,7 +3,7 @@
     <%= render "shared/errors", resource: order %>
   <% end %>
 
-  <div class="form-group col-md-5">
+  <div class="form-group col-md-5 ticket-select-field">
     <%= f.select :tickets, [], {}, { class: "form-control" } do %>
       <% showtime.seats_remaining.times do |number| %>
         <%= content_tag :option, (number + 1), value: (number + 1) %>
@@ -15,7 +15,7 @@
   <%= f.hidden_field :movie_id, value: movie.id %>
   <%= f.hidden_field :showtime_id, value: params[:id] %>
 
-  <div class="form-group col-md-4">
-    <%= f.submit "Order tickets", class: "btn btn-primary" %>
+  <div class="form-group">
+    <%= f.submit "Order tickets", class: "btn btn-primary add-ticket-button" %>
   </div>
 <% end %>
