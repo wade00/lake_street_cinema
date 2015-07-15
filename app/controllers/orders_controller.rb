@@ -11,8 +11,16 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(order_params)
+    # Placeholder values since the following aren't sent with form when order first created
     @order.email = "placeholder@example.com"
     @order.credit_card = "0000000000000000"
+    @order.card_expiration_month = "00"
+    @order.card_expiration_year = "0000"
+    @order.street_address = "0"
+    @order.city = "city"
+    @order.state = "state"
+    @order.zip_code = "00000"
+    @order.country = "country"
 
     if @order.save
       redirect_to edit_order_path(@order)
@@ -25,8 +33,16 @@ class OrdersController < ApplicationController
   end
 
   def edit
+    # Remove all placeholder values so they don't populate in form
     @order.email = ""
     @order.credit_card = ""
+    @order.card_expiration_month = ""
+    @order.card_expiration_year = ""
+    @order.street_address = ""
+    @order.city = ""
+    @order.state = ""
+    @order.zip_code = ""
+    @order.country = ""
   end
 
   def update
