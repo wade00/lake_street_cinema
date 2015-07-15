@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150714195510) do
+ActiveRecord::Schema.define(version: 20150715034256) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,9 +61,11 @@ ActiveRecord::Schema.define(version: 20150714195510) do
     t.integer  "movie_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "order_id"
   end
 
   add_index "showtimes", ["movie_id"], name: "index_showtimes_on_movie_id", using: :btree
+  add_index "showtimes", ["order_id"], name: "index_showtimes_on_order_id", using: :btree
   add_index "showtimes", ["theater_id"], name: "index_showtimes_on_theater_id", using: :btree
 
   create_table "theaters", force: :cascade do |t|
@@ -78,5 +80,6 @@ ActiveRecord::Schema.define(version: 20150714195510) do
   add_foreign_key "orders", "showtimes"
   add_foreign_key "orders", "theaters"
   add_foreign_key "showtimes", "movies"
+  add_foreign_key "showtimes", "orders"
   add_foreign_key "showtimes", "theaters"
 end
