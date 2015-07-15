@@ -72,25 +72,10 @@ ActiveRecord::Schema.define(version: 20150714195510) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "tickets", force: :cascade do |t|
-    t.integer  "showtime_id"
-    t.integer  "order_id"
-    t.integer  "theater_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  add_index "tickets", ["order_id"], name: "index_tickets_on_order_id", using: :btree
-  add_index "tickets", ["showtime_id"], name: "index_tickets_on_showtime_id", using: :btree
-  add_index "tickets", ["theater_id"], name: "index_tickets_on_theater_id", using: :btree
-
   add_foreign_key "movies", "theaters"
   add_foreign_key "orders", "movies"
   add_foreign_key "orders", "showtimes"
   add_foreign_key "orders", "theaters"
   add_foreign_key "showtimes", "movies"
   add_foreign_key "showtimes", "theaters"
-  add_foreign_key "tickets", "orders"
-  add_foreign_key "tickets", "showtimes"
-  add_foreign_key "tickets", "theaters"
 end
