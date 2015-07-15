@@ -11,3 +11,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Don't include secrets file
+app/config/secrets.yml
