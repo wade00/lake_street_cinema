@@ -13,6 +13,7 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     # Placeholder values since the following aren't sent with form when order first created
     @order.email = "placeholder@example.com"
+    @order.name = "placeholder"
     @order.credit_card = "0000000000000000"
     @order.card_expiration_month = "00"
     @order.card_expiration_year = "0000"
@@ -35,6 +36,7 @@ class OrdersController < ApplicationController
   def edit
     # Remove all placeholder values so they don't populate in form
     @order.email = ""
+    @order.name = ""
     @order.credit_card = ""
     @order.card_expiration_month = ""
     @order.card_expiration_year = ""
@@ -65,7 +67,7 @@ class OrdersController < ApplicationController
     end
 
     def order_params
-      params.require(:order).permit(:email, :credit_card, :card_expiration_month, :card_expiration_year,
+      params.require(:order).permit(:email, :name, :credit_card, :card_expiration_month, :card_expiration_year,
                                     :tickets, :street_address, :city, :state, :zip_code, :country,
                                     :theater_id, :showtime_id, :movie_id)
     end

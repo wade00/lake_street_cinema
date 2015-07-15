@@ -1,5 +1,6 @@
 class AddCreditCardInfotoOrders < ActiveRecord::Migration
   def change
+    add_column :orders, :name, :string
     add_column :orders, :card_expiration_month, :string
     add_column :orders, :card_expiration_year, :string
     add_column :orders, :street_address, :string

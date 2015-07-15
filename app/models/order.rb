@@ -18,6 +18,7 @@ class Order < ActiveRecord::Base
                           format: { with: VALID_CREDIT_CARD_REGEX,
                                     message: "- the card info doesn't look right to us. Check the length and make sure it's only numbers please." }
 
+  validates :name, presence: true
   validates :card_expiration_month, presence: true
   validates :card_expiration_year,  presence: true
   validates :street_address, presence: true

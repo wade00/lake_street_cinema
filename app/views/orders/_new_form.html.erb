@@ -6,7 +6,7 @@
   <div class="form-group">
     <%= f.label 'How many tickets?' %>
     <%= f.select :tickets, [], {}, { class: "form-control" } do %>
-      <% 1...(movie.theater.capacity).times do |number| %>
+      <% movie.theater.capacity.times do |number| %>
         <%= content_tag :option, (number + 1), value: (number + 1) %>
       <% end %>
     <% end %>
@@ -14,9 +14,15 @@
 
   <div class="form-group">
     <%= f.label 'Which showtime?' %>
-    <%= f.select :showtime_id, options_from_collection_for_select(movie.theater.showtimes,
-                                                               "id", "start_time"),
-                                                               {}, { class: "form-control" } %>
+    <%= f.select :showtime_id, [], {}, { class: "form-control" } do %>
+      <% movie.theater.showtimes.each do |showtime| %>
+        <%= content_tag :option,
+                        showtime.start_time.hour < 12 ?
+                        "#{showtime.start_time.strftime("%I:%M")} am" :
+                        "#{showtime.start_time.strftime("%I:%M")} pm",
+                        value: showtime.id %>
+      <% end %>
+    <% end %>
   </div>
 
   <%= f.hidden_field :theater_id, value: movie.theater.id %>

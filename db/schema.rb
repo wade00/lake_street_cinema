@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20150714195510) do
     t.datetime "updated_at",            null: false
     t.string   "tickets"
     t.integer  "movie_id"
+    t.string   "name"
     t.string   "card_expiration_month"
     t.string   "card_expiration_year"
     t.string   "street_address"
