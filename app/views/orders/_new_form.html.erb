@@ -5,7 +5,7 @@
 
   <div class="form-group col-md-5">
     <%= f.select :tickets, [], {}, { class: "form-control" } do %>
-      <% movie.theater.capacity.times do |number| %>
+      <% showtime.seats_remaining.times do |number| %>
         <%= content_tag :option, (number + 1), value: (number + 1) %>
       <% end %>
     <% end %>

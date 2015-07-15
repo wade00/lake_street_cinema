@@ -13,8 +13,12 @@
             <% movie.showtimes.each do |showtime| %>
               <div class="col-xs-4">
                 <p>
-                  <%= link_to movie_showtime_path(movie, showtime) do %>
-                    <%= to_strftime(showtime) %>
+                  <% if sold_out(showtime) %>
+                    <strong>sold out</strong>
+                  <% else %>
+                    <%= link_to movie_showtime_path(movie, showtime) do %>
+                      <%= to_strftime(showtime) %>
+                    <% end %>
                   <% end %>
                 </p>
               </div>
