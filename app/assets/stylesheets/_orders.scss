@@ -9,3 +9,19 @@
 .reserve-tickets-header {
   font-weight: 300;
 }
+
+.movie-order-review-list {
+  list-style: none;
+  padding-left: 0px;
+  li {
+    display: inline-block;
+    margin: 10px;
+  }
+}
+
+.no-orders-message {
+  position: absolute;
+  top: 150px;
+  left: 40%;
+  width: 20%;
+}

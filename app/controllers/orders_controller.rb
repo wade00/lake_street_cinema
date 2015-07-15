@@ -3,6 +3,7 @@ class OrdersController < ApplicationController
 
   def index
     @orders = Order.all
+    @movies = Movie.order(:title)
   end
 
   def new
