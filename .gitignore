@@ -13,4 +13,4 @@
 /tmp
 
 # Don't include secrets file
-app/config/secrets.yml
+config/secrets.yml
