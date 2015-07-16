@@ -1,31 +1,39 @@
-<h1>Hi <%= @order.name %>! Let the countdown 'til showtime begin...</h1>
-<p>
-  Remember, tickets are will call, but you want to skip the line just print this receipt out and give it to the ticket taker.
-</p>
-<div>
-  <h4>Your order information:</h4>
-  <p>
-    <% if (@order.tickets).to_i > 1 %>
-      <%= @order.tickets %> tickets for
-    <% else %>
-      <%= @order.tickets %> ticket for
-    <% end %>
-    <em><%= @order.movie.title %></em>
-  </p>
-  <div>
+<div style="background:#F2F2F2; padding:20px">
+  <div style="background:#FFF; padding:40px">
+    <div style="text-align:center">
+      <h2 style="color:#C9635D">Lake Street Cinemas</h2>
+    </div>
+    <hr />
+    <h3>Hi <%= @order.name %>! Let the countdown 'til showtime begin...</h3>
     <p>
-      Theater number <%= @order.theater.number %> at <strong><%= to_strftime(@order.showtime) %></strong>
-      <span style="text-alight=right"><%= number_to_currency(ticket_price(@order.showtime)) %> each</span>
+      Remember, tickets are will call, but you want to skip the line just print this receipt out and give it to the ticket taker.
     </p>
+
+    <div style="background:#FFFFEB; padding:20px">
+      <h4>Your order information:</h4>
+      <p>
+        <% if (@order.tickets).to_i > 1 %>
+          <%= @order.tickets %> tickets for
+        <% else %>
+          <%= @order.tickets %> ticket for
+        <% end %>
+        <em><%= @order.movie.title %></em>
+      </p>
+      <div>
+        <p>
+          Theater number <%= @order.theater.number %> at <strong><%= to_strftime(@order.showtime) %></strong>
+          <span style="text-alight=right"><%= number_to_currency(ticket_price(@order.showtime)) %> each</span>
+        </p>
+      </div>
+      <hr />
+      <div style="text-align:right">
+        <p>Subtotal: <%= number_to_currency(order_subtotal(@order.showtime, @order.tickets)) %></p>
+        <p>Tax: <%= number_to_currency(order_tax(@order.showtime, @order.tickets)) %></p>
+        <p><strong>Total: <%= number_to_currency(order_total(@order.showtime, @order.tickets)) %></strong></p>
+      </div>
+    </div>
+
+    <p>Thank you for your purchase and enjoy the show!</p>
+    <p>- Lake Street Cinema</p>
   </div>
 </div>
-
-<hr />
-
-<div style="text-align=right">
-  <p>Subtotal: <%= number_to_currency(order_subtotal(@order.showtime, @order.tickets)) %></p>
-  <p>Tax: <%= number_to_currency(order_tax(@order.showtime, @order.tickets)) %></p>
-  <p><strong>Total: <%= number_to_currency(order_total(@order.showtime, @order.tickets)) %></strong></p>
-</div>
-
-<p>Thank you for your purchase and enjoy the show!</p>
