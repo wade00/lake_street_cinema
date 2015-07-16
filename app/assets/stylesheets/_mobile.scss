@@ -1,8 +1,8 @@
-/* iPhone 5 */
+/* iPhone screen media query (min is iPhone 4, max iPhone 6) */
 
 @media only screen
   and (min-device-width: 320px)
-  and (max-device-width: 568px)
+  and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
   .now-showing-header {
@@ -12,7 +12,7 @@
   }
 
   .movie-thumbnail-image-index {
-    height: 400px;
+    height: 500px;
     h4 {
       font-size: 80px;
     }
@@ -21,7 +21,9 @@
     }
   }
 
-  .add-ticket-button, .submit-ticket-order-button, .back-to-movies-button {
+  .add-ticket-button,
+  .submit-ticket-order-button,
+  .back-to-movies-button {
     width: 100%;
     margin: 10px 0;
     font-size: 60px;
@@ -59,4 +61,32 @@
   .order-summary {
     font-size: 32px;
   }
+
+  .verify-age-modal {
+    font-size: 28px;
+    margin: 50px -150px;
+    h4 {
+      font-size: 32px;
+    }
+    select {
+      height: 60px;
+      font-size: 28px;
+    }
+  }
+
+  .verify-age-button {
+    font-size: 48px;
+    width: 100%;
+  }
+
+  .not-old-enough-message {
+    h4 {
+      font-size: 32px;
+    }
+    a {
+      margin-left: 0px;
+      margin-top: 20px;
+    }
+  }
 }
+

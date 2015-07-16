@@ -1,15 +1,17 @@
-<div style="background:#F2F2F2; padding:10px">
-  <div style="background:#FFF; padding:10px">
-    <div style="text-align:center">
-      <h2 style="color:#C9635D">Lake Street Cinemas</h2>
+<div style="background:#F2F2F2; padding:10px;">
+  <div style="background:#FFF; padding:10px;">
+    <div style="text-align:center;">
+      <h2 style="color:#C9635D;">Lake Street Cinema</h2>
     </div>
+
     <hr />
+
     <h3>Hi <%= @order.name %>! Let the countdown 'til showtime begin...</h3>
     <p>
       Remember, tickets are will call, but you want to skip the line just print this receipt out and give it to the ticket taker.
     </p>
 
-    <div style="background:#FFFFEB; padding:10px">
+    <div style="background:#FFFFEB; padding:10px;">
       <h4>Your order information:</h4>
       <p>
         <% if (@order.tickets).to_i > 1 %>
@@ -21,12 +23,18 @@
       </p>
       <div>
         <p>
-          Theater number <%= @order.theater.number %> at <strong><%= to_strftime(@order.showtime) %></strong>
-          <span style="text-align:right"><%= number_to_currency(ticket_price(@order.showtime)) %> each</span>
+          <span style="width:80%;">
+            Theater number <%= @order.theater.number %> at <strong><%= to_strftime(@order.showtime) %></strong>
+          </span>
+          <span style="width:20%; text-align:right;">
+            <%= number_to_currency(ticket_price(@order.showtime)) %> each
+          </span>
         </p>
       </div>
+
       <hr />
-      <div style="text-align:right">
+
+      <div style="text-align:right;">
         <p>Subtotal: <%= number_to_currency(order_subtotal(@order.showtime, @order.tickets)) %></p>
         <p>Tax: <%= number_to_currency(order_tax(@order.showtime, @order.tickets)) %></p>
         <p><strong>Total: <%= number_to_currency(order_total(@order.showtime, @order.tickets)) %></strong></p>

@@ -15,7 +15,9 @@
       <p>
         <%= @movie.synopsis %>
       </p>
+
       <hr />
+
       <% if age_check_passes?(@movie, params[:id]) %>
         <h4 class="reserve-tickets-header">
           Reserve your tickets for <%= @movie.title %>
@@ -23,7 +25,10 @@
         </h4>
         <%= render 'orders/new_form', order: Order.new, movie: @movie, showtime: @showtime %>
       <% else %>
-        <h4>Sorry, you're not old enough to see this movie!</h4>
+        <div class="not-old-enough-message">
+          <h4>Sorry, you're not old enough to see this movie!</h4>
+          <%= link_to "Back to movies", movies_path, class: "btn btn-primary back-to-movies-button"  %>
+        </div>
       <% end %>
     </div>
   </div>

@@ -17,7 +17,7 @@
 }
 
 .movie-showtime-info {
-  color: #FFF;
+  color: $lightgrey;
   position: absolute;
   top: 0;
   width: 100%;
@@ -25,7 +25,7 @@
     font-size: 32px;
     font-weight: 300;
     a {
-      color: #FFF;
+      color: $lightgrey;
       text-decoration: none;
     }
   }
@@ -33,7 +33,16 @@
 
 .showtime-index {
   display: none;
-  padding-top: 50px;
+  padding-top: 20px;
+  .showtime-link {
+    &:hover {
+      color: darken($lightgrey, 20%)
+    }
+  }
+  .sold-out-showtime {
+    color: $red;
+    text-shadow: 1px 1px lighten($red, 10%);
+  }
 }
 
 .movie-thumbnail-image-index {
@@ -58,5 +67,26 @@
   margin-bottom: 20px;
   img {
     width: 100%;
+  }
+}
+
+.verify-age-modal {
+  border-radius: 0px;
+  h4 {
+    font-weight: 300;
+  }
+  label {
+    font-weight: 300;
+  }
+}
+
+.not-old-enough-message {
+  color: $red;
+  h4 {
+    display: inline-block;
+  }
+  a {
+    margin-top: 0px;
+    margin-left: 10px;
   }
 }

@@ -10,13 +10,14 @@
           <div class="movie-showtime-info">
             <h4 id="movie-<%= movie.id %>-title"><%= movie.title %></h4>
             <div class="showtime-index" id="movie-<%= movie.id %>-showtimes">
+              <h4>Showtimes</h4>
               <% movie.showtimes.each do |showtime| %>
                 <div class="col-xs-6">
                   <p>
                     <% if sold_out(showtime) %>
-                      <strike><%= to_strftime(showtime) %></strike>
+                      <span class="sold-out-showtime">Sold Out</span>
                     <% else %>
-                      <%= link_to movie_showtime_path(movie, showtime) do %>
+                      <%= link_to movie_showtime_path(movie, showtime), class: "showtime-link" do %>
                         <%= to_strftime(showtime) %>
                       <% end %>
                     <% end %>
