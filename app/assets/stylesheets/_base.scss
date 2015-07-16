@@ -1,0 +1,19 @@
+body {
+  background: $lightgrey;
+  padding: 20px;
+}
+
+.body-panel {
+  background: #FFF;
+  padding: 20px;
+}
+
+.header-logo {
+  color: $green;
+  h1 {
+    font-weight: 300;
+  }
+  hr {
+    width: 50%;
+  }
+}

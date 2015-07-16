@@ -8,6 +8,7 @@ var ready;
 ready = function() {
   setupBase();
   setupShowtimes();
+  setupMovies();
 };
 
 $(document).ready(ready);
@@ -19,10 +20,16 @@ function setupShowtimes() {
   }
 }
 
+function setupMovies() {
+  if ($('.movie-thumbnail').length > 0) {
+    displayShowtimes();
+  }
+}
+
 function setupBase() {
   if ($('#flash').length > 0) {
     setTimeout(function() {
       $('#flash').fadeOut();
-    }, 4000);
+    }, 3000);
   }
 }

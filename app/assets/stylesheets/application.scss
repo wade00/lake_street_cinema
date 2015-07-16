@@ -4,7 +4,12 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+// Variables
+$lightgrey: #F2F2F2;
+$green: #c9635d;
+
 // App
+@import "base";
 @import "movies";
 @import "orders";
 @import "showtimes";

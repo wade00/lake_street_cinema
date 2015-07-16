@@ -1,7 +1,8 @@
 /* Index Page */
 
 .movie-thumbnail {
-  margin-bottom: 15px;
+  margin: 0px;
+  padding: 0px;
   img {
     width: 100%;
     opacity: 0.4;
@@ -14,12 +15,17 @@
   top: 0;
   width: 100%;
   p {
-    font-size: 18px;
+    font-size: 22px;
     a {
       color: #DDD;
       text-decoration: none;
     }
   }
+}
+
+.showtime-index {
+  display: none;
+  padding-top: 50px;
 }
 
 .movie-thumbnail-image-index {
@@ -29,7 +35,7 @@
   height: 300px;
   overflow: hidden;
   h4 {
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 300;
     padding: 10px;
   }

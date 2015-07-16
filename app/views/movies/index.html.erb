@@ -1,28 +1,29 @@
 <div class="container">
   <div class="row col-xs-12 text-center">
-    <h2>Now Showing:</h2>
+    <h2>Now Showing</h2>
   </div>
   <div class="row movies-container">
     <% @movies.each do |movie| %>
-      <div class="col-md-4 movie-thumbnail">
+      <div class="col-md-4 movie-thumbnail" id="movie-<%= movie.id %>">
         <div class="movie-thumbnail-image-index text-center">
           <%= image_tag movie.image, alt: movie.title, class: "movie-image" %>
           <div class="movie-showtime-info">
-            <h4><%= movie.title %></h4>
-            <p>Showtimes</p>
-            <% movie.showtimes.each do |showtime| %>
-              <div class="col-xs-4">
-                <p>
-                  <% if sold_out(showtime) %>
-                    <strong>sold out</strong>
-                  <% else %>
-                    <%= link_to movie_showtime_path(movie, showtime) do %>
-                      <%= to_strftime(showtime) %>
+            <h4 id="movie-<%= movie.id %>-title"><%= movie.title %></h4>
+            <div class="showtime-index" id="movie-<%= movie.id %>-showtimes">
+              <% movie.showtimes.each do |showtime| %>
+                <div class="col-xs-4">
+                  <p>
+                    <% if sold_out(showtime) %>
+                      sold out
+                    <% else %>
+                      <%= link_to movie_showtime_path(movie, showtime) do %>
+                        <%= to_strftime(showtime) %>
+                      <% end %>
                     <% end %>
-                  <% end %>
-                </p>
-              </div>
-            <% end %>
+                  </p>
+                </div>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
