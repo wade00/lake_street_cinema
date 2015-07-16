@@ -24,10 +24,39 @@
   .add-ticket-button, .submit-ticket-order-button, .back-to-movies-button {
     width: 100%;
     margin: 10px 0;
-    font-size: 32px;
+    font-size: 60px;
   }
 
   .edit-order-page {
     font-size: 28px;
+  }
+
+  .showtime-summary {
+    font-size: 28px;
+    p {
+      margin: 50px 0;
+    }
+    select {
+      height: 60px;
+      font-size: 28px;
+    }
+  }
+
+  .edit-ticket-order-form {
+    input {
+      height: 60px;
+    }
+    select {
+      height: 60px;
+      font-size: 28px;
+    }
+    .submit-ticket-order-button {
+      height: 100px;
+      margin-bottom: 50px;
+    }
+  }
+
+  .order-summary {
+    font-size: 32px;
   }
 }

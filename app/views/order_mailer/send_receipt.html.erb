@@ -22,7 +22,7 @@
       <div>
         <p>
           Theater number <%= @order.theater.number %> at <strong><%= to_strftime(@order.showtime) %></strong>
-          <span style="text-alight=right"><%= number_to_currency(ticket_price(@order.showtime)) %> each</span>
+          <span style="text-align:right"><%= number_to_currency(ticket_price(@order.showtime)) %> each</span>
         </p>
       </div>
       <hr />

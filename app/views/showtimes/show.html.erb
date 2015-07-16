@@ -5,17 +5,17 @@
     <div class="col-md-3 col-xs-12 movie-thumbnail-image-show">
       <%= image_tag @movie.image, class: "img-responsive" %>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8 showtime-summary">
       <h3>
         <%= to_strftime(@showtime) %> showing for <%= @movie.title %> (<%= @movie.rating %>)
       </h3>
       <p>
         Director: <%= @movie.director %> | Genre: <%= @movie.genre %> | Runtime: <%= @movie.runtime %> min
       </p>
-      <p><%= @movie.synopsis %></p>
-
+      <p>
+        <%= @movie.synopsis %>
+      </p>
       <hr />
-
       <% if age_check_passes?(@movie, params[:id]) %>
         <h4 class="reserve-tickets-header">
           Reserve your tickets for <%= @movie.title %>

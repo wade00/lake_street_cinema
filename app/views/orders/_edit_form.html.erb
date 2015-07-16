@@ -1,4 +1,4 @@
-<%= form_for order do |f| %>
+<%= form_for order, html: { class: "edit-ticket-order-form" } do |f| %>
   <% if order.errors.any? %>
     <%= render "shared/errors", resource: order %>
   <% end %>
