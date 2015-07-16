@@ -1,12 +1,9 @@
 function displayShowtimes() {
-  $('.movie-thumbnail').mouseover(function() {
+  $('.movie-thumbnail').hover(function() {
     id = $(this).attr('id');
     $('#' + id + '-title').slideUp();
     $('#' + id + '-showtimes').fadeIn();
-  });
-
-  $('.movie-thumbnail').mouseout(function() {
-    id = $(this).attr('id');
+  }, function() {
     $('#' + id + '-title').slideDown();
     $('#' + id + '-showtimes').fadeOut();
   });
