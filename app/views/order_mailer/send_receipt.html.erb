@@ -22,7 +22,7 @@
 
 <hr />
 
-<div style="text-alight=right">
+<div style="text-align=right">
   <p>Subtotal: <%= number_to_currency(order_subtotal(@order.showtime, @order.tickets)) %></p>
   <p>Tax: <%= number_to_currency(order_tax(@order.showtime, @order.tickets)) %></p>
   <p><strong>Total: <%= number_to_currency(order_total(@order.showtime, @order.tickets)) %></strong></p>
