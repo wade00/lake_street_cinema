@@ -2,13 +2,11 @@
   <div class="row">
     <div class="col-xs-12">
       <h3>Thank you for your order! You'll receive an email confirmation shortly.</h3>
-      <h4>Tickets are will call or you can print your order confirmation and present it to the ticket taker.</h4>
-      <p>Your order:</p>
+      <p>Tickets are will call or you can print your order confirmation and present it to the ticket taker.</p>
+      <h4>Your order:</h4>
     </div>
   </div>
-
   <hr />
-
   <div class="row">
     <div class="col-xs-12">
       <%= render 'order_summary', order: @order, movie: @movie %>
@@ -17,7 +15,7 @@
 
   <div class="row">
     <div class="col-xs-12 text-center">
-      <%= link_to "Back to movies", movies_path, class: "btn btn-primary"  %>
+      <%= link_to "Back to movies", movies_path, class: "btn btn-primary back-to-movies-button"  %>
     </div>
   </div>
 </div>

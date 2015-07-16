@@ -1,26 +1,26 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 text-center">
-      <h3>Please review your order before purchasing</h3>
-      <hr />
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-6">
-    <h4>Your Order:</h4>
-    <hr />
-      <%= render 'order_summary', order: @order, movie: @movie %>
-    </div>
-
-    <div class="col-md-5 col-md-offset-1 col-xs-12">
-      <div class="text-center">
-        <h4>Please enter your email and credit card info for billing:</h4>
+<div class="edit-order-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h3>Please review your order before purchasing</h3>
         <hr />
       </div>
+    </div>
 
-      <%= render 'edit_form', order: @order %>
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Your Order</h4>
+        <hr />
+        <%= render 'order_summary', order: @order, movie: @movie %>
+      </div>
 
+      <div class="col-md-5 col-md-offset-1 col-xs-12">
+        <div class="text-center">
+          <h4>Please enter your email and credit card info for billing</h4>
+          <hr />
+        </div>
+        <%= render 'edit_form', order: @order %>
+      </div>
     </div>
   </div>
 </div>

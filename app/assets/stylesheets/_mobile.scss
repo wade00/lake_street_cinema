@@ -1,0 +1,33 @@
+/* iPhone 5 */
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  .now-showing-header {
+    h2 {
+      font-size: 60px;
+    }
+  }
+
+  .movie-thumbnail-image-index {
+    height: 400px;
+    h4 {
+      font-size: 80px;
+    }
+    p {
+      font-size: 60px;
+    }
+  }
+
+  .add-ticket-button, .submit-ticket-order-button, .back-to-movies-button {
+    width: 100%;
+    margin: 10px 0;
+    font-size: 32px;
+  }
+
+  .edit-order-page {
+    font-size: 28px;
+  }
+}

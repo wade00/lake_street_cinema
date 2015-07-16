@@ -2,8 +2,8 @@
   <%= render 'verify_age_popup', movie: @movie, showtime_id: params[:id] %>
 
   <div class="row">
-    <div class="col-md-3 movie-thumbnail-image-show">
-      <%= image_tag @movie.image %>
+    <div class="col-md-3 col-xs-12 movie-thumbnail-image-show">
+      <%= image_tag @movie.image, class: "img-responsive" %>
     </div>
     <div class="col-md-8">
       <h3>
@@ -17,7 +17,10 @@
       <hr />
 
       <% if age_check_passes?(@movie, params[:id]) %>
-        <h4 class="reserve-tickets-header">Reserve your tickets for <%= @movie.title %>:</h4>
+        <h4 class="reserve-tickets-header">
+          Reserve your tickets for <%= @movie.title %>
+          <small>(<%= @showtime.seats_remaining %> seats left)</small>
+        </h4>
         <%= render 'orders/new_form', order: Order.new, movie: @movie, showtime: @showtime %>
       <% else %>
         <h4>Sorry, you're not old enough to see this movie!</h4>

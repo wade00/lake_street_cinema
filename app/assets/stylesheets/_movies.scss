@@ -1,5 +1,12 @@
 /* Index Page */
 
+.now-showing-header {
+  h2 {
+    font-weight: 300;
+    margin-bottom: 50px;
+  }
+}
+
 .movie-thumbnail {
   margin: 0px;
   padding: 0px;
@@ -48,7 +55,8 @@
   padding: none;
   overflow: hidden;
   height: 400px;
+  margin-bottom: 20px;
   img {
-    height: 100%;
+    width: 100%;
   }
 }

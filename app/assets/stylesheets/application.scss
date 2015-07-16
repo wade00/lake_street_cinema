@@ -6,10 +6,13 @@
 
 // Variables
 $lightgrey: #F2F2F2;
-$green: #c9635d;
+$red: #C9635D;
+$yellow: #FFFFEB;
+@input-border-focus: $red;
 
 // App
 @import "base";
 @import "movies";
 @import "orders";
 @import "showtimes";
+@import "mobile";

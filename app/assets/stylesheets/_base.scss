@@ -9,11 +9,25 @@ body {
 }
 
 .header-logo {
-  color: $green;
+  color: $red;
   h1 {
     font-weight: 300;
   }
   hr {
     width: 50%;
+  }
+}
+
+.btn {
+  border-radius: 0px;
+  border: 0px;
+}
+
+.btn-primary {
+  background: $red;
+  border-bottom: 2px solid darken($red, 10%);
+  &:hover {
+    background: darken($red, 10%);
+    border-bottom: 2px solid $red;
   }
 }
