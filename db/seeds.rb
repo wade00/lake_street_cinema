@@ -2,43 +2,43 @@
 theater_array = [
   {
     number: "1",
-    capacity: 100
+    capacity: 50
   },
   {
     number: "2",
-    capacity: 75
+    capacity: 40
   },
   {
     number: "3",
-    capacity: 80
+    capacity: 40
   },
   {
     number: "4",
-    capacity: 50
+    capacity: 30
   },
   {
     number: "5",
-    capacity: 100
-  },
-  {
-    number: "6",
-    capacity: 100
-  },
-  {
-    number: "7",
-    capacity: 75
-  },
-  {
-    number: "8",
-    capacity: 80
-  },
-  {
-    number: "9",
     capacity: 50
   },
   {
+    number: "6",
+    capacity: 50
+  },
+  {
+    number: "7",
+    capacity: 40
+  },
+  {
+    number: "8",
+    capacity: 40
+  },
+  {
+    number: "9",
+    capacity: 30
+  },
+  {
     number: "10",
-    capacity: 100
+    capacity: 50
   }
 ]
 
@@ -204,264 +204,454 @@ movie9  = Movie.find_by(title: "The Lord of the Rings: The Return of the King")
 movie10 = Movie.find_by(title: "Pi")
 
 # Showtimes
-showtimes_array = [
-  {
-    theater: theater1,
-    movie: movie1,
-    start_time: "10:00"
-  },
-  {
-    theater: theater1,
-    movie: movie1,
-    start_time: "13:00"
-  },
-  {
-    theater: theater1,
-    movie: movie1,
-    start_time: "16:00"
-  },
-  {
-    theater: theater1,
-    movie: movie1,
-    start_time: "19:00"
-  },
-  {
-    theater: theater1,
-    movie: movie1,
-    start_time: "22:00"
-  },
-  {
-    theater: theater2,
-    movie: movie2,
-    start_time: "10:30"
-  },
-  {
-    theater: theater2,
-    movie: movie2,
-    start_time: "13:30"
-  },
-  {
-    theater: theater2,
-    movie: movie2,
-    start_time: "16:30"
-  },
-  {
-    theater: theater2,
-    movie: movie2,
-    start_time: "19:30"
-  },
-  {
-    theater: theater2,
-    movie: movie2,
-    start_time: "22:30"
-  },
-  {
-    theater: theater3,
-    movie: movie3,
-    start_time: "10:00"
-  },
-  {
-    theater: theater3,
-    movie: movie3,
-    start_time: "13:00"
-  },
-  {
-    theater: theater3,
-    movie: movie3,
-    start_time: "16:00"
-  },
-  {
-    theater: theater3,
-    movie: movie3,
-    start_time: "19:00"
-  },
-  {
-    theater: theater3,
-    movie: movie3,
-    start_time: "22:00"
-  },
-    {
-    theater: theater4,
-    movie: movie4,
-    start_time: "10:30"
-  },
-  {
-    theater: theater4,
-    movie: movie4,
-    start_time: "13:30"
-  },
-  {
-    theater: theater4,
-    movie: movie4,
-    start_time: "16:30"
-  },
-  {
-    theater: theater4,
-    movie: movie4,
-    start_time: "19:30"
-  },
-  {
-    theater: theater4,
-    movie: movie4,
-    start_time: "22:30"
-  },
-    {
-    theater: theater5,
-    movie: movie5,
-    start_time: "10:00"
-  },
-  {
-    theater: theater5,
-    movie: movie5,
-    start_time: "13:00"
-  },
-  {
-    theater: theater5,
-    movie: movie5,
-    start_time: "16:00"
-  },
-  {
-    theater: theater5,
-    movie: movie5,
-    start_time: "19:00"
-  },
-  {
-    theater: theater5,
-    movie: movie5,
-    start_time: "22:00"
-  },
-    {
-    theater: theater6,
-    movie: movie6,
-    start_time: "10:30"
-  },
-  {
-    theater: theater6,
-    movie: movie6,
-    start_time: "13:30"
-  },
-  {
-    theater: theater6,
-    movie: movie6,
-    start_time: "16:30"
-  },
-  {
-    theater: theater6,
-    movie: movie6,
-    start_time: "19:30"
-  },
-  {
-    theater: theater6,
-    movie: movie6,
-    start_time: "22:30"
-  },
-    {
-    theater: theater7,
-    movie: movie7,
-    start_time: "10:00"
-  },
-  {
-    theater: theater7,
-    movie: movie7,
-    start_time: "13:00"
-  },
-  {
-    theater: theater7,
-    movie: movie7,
-    start_time: "16:00"
-  },
-  {
-    theater: theater7,
-    movie: movie7,
-    start_time: "19:00"
-  },
-  {
-    theater: theater7,
-    movie: movie7,
-    start_time: "22:00"
-  },
-    {
-    theater: theater8,
-    movie: movie8,
-    start_time: "10:30"
-  },
-  {
-    theater: theater8,
-    movie: movie8,
-    start_time: "13:30"
-  },
-  {
-    theater: theater8,
-    movie: movie8,
-    start_time: "16:30"
-  },
-  {
-    theater: theater8,
-    movie: movie8,
-    start_time: "19:30"
-  },
-  {
-    theater: theater8,
-    movie: movie8,
-    start_time: "22:30"
-  },
-    {
-    theater: theater9,
-    movie: movie9,
-    start_time: "10:00"
-  },
-  {
-    theater: theater9,
-    movie: movie9,
-    start_time: "13:00"
-  },
-  {
-    theater: theater9,
-    movie: movie9,
-    start_time: "16:00"
-  },
-  {
-    theater: theater9,
-    movie: movie9,
-    start_time: "19:00"
-  },
-  {
-    theater: theater9,
-    movie: movie9,
-    start_time: "22:00"
-  },
-    {
-    theater: theater10,
-    movie: movie10,
-    start_time: "10:30"
-  },
-  {
-    theater: theater10,
-    movie: movie10,
-    start_time: "13:30"
-  },
-  {
-    theater: theater10,
-    movie: movie10,
-    start_time: "16:30"
-  },
-  {
-    theater: theater10,
-    movie: movie10,
-    start_time: "19:30"
-  },
-  {
-    theater: theater10,
-    movie: movie10,
-    start_time: "22:30"
-  }
-]
 
-showtimes_array.each do |showtime_hash|
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 10:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
-  showtime.theater = showtime_hash[:theater]
-  showtime.movie = showtime_hash[:movie]
-  showtime.start_time = showtime_hash[:start_time]
+  showtime.theater = theater1
+  showtime.movie = movie1
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 13:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater1
+  showtime.movie = movie1
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 16:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater1
+  showtime.movie = movie1
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 19:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater1
+  showtime.movie = movie1
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 22:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater1
+  showtime.movie = movie1
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 10:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater2
+  showtime.movie = movie2
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 13:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater2
+  showtime.movie = movie2
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 16:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater2
+  showtime.movie = movie2
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 19:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater2
+  showtime.movie = movie2
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 22:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater2
+  showtime.movie = movie2
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 10:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater3
+  showtime.movie = movie3
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 13:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater3
+  showtime.movie = movie3
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 16:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater3
+  showtime.movie = movie3
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 19:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater3
+  showtime.movie = movie3
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 22:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater3
+  showtime.movie = movie3
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 10:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater4
+  showtime.movie = movie4
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 13:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater4
+  showtime.movie = movie4
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 16:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater4
+  showtime.movie = movie4
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 19:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater4
+  showtime.movie = movie4
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 22:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater4
+  showtime.movie = movie4
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 10:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater5
+  showtime.movie = movie5
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 13:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater5
+  showtime.movie = movie5
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 16:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater5
+  showtime.movie = movie5
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 19:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater5
+  showtime.movie = movie5
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 22:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater5
+  showtime.movie = movie5
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 10:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater6
+  showtime.movie = movie6
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 13:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater6
+  showtime.movie = movie6
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 16:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater6
+  showtime.movie = movie6
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 19:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater6
+  showtime.movie = movie6
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 22:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater6
+  showtime.movie = movie6
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 10:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater7
+  showtime.movie = movie7
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 13:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater7
+  showtime.movie = movie7
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 16:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater7
+  showtime.movie = movie7
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 19:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater7
+  showtime.movie = movie7
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 22:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater7
+  showtime.movie = movie7
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 10:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater8
+  showtime.movie = movie8
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 13:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater8
+  showtime.movie = movie8
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 16:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater8
+  showtime.movie = movie8
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 19:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater8
+  showtime.movie = movie8
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 22:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater8
+  showtime.movie = movie8
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 10:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater9
+  showtime.movie = movie9
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 13:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater9
+  showtime.movie = movie9
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 16:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater9
+  showtime.movie = movie9
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 19:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater9
+  showtime.movie = movie9
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 22:00', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater9
+  showtime.movie = movie9
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 10:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater10
+  showtime.movie = movie10
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 13:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater10
+  showtime.movie = movie10
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 16:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater10
+  showtime.movie = movie10
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 19:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater10
+  showtime.movie = movie10
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
+  showtime.save
+end
+
+7.times do |n|
+  dateTimeStart = Time.strptime('07/20/2015 22:30', '%m/%d/%Y %H:%M')
+  showtime = Showtime.new
+  showtime.theater = theater10
+  showtime.movie = movie10
+  n == 0 ? showtime.start_time = dateTimeStart : showtime.start_time = dateTimeStart + (n + 1).day
   showtime.save
 end
 

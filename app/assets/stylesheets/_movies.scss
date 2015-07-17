@@ -7,7 +7,16 @@
   }
 }
 
+.select-showtime-date {
+  margin: -20px 0 20px;
+}
+
+.movies-container {
+  height: 100vh;
+}
+
 .movie-thumbnail {
+  display: none;
   margin: 0px;
   padding: 0px;
   img {

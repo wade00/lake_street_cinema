@@ -22,7 +22,9 @@ function setupShowtimes() {
 
 function setupMovies() {
   if ($('.movie-thumbnail').length > 0) {
+    fadeInMovieTiles();
     displayShowtimes();
+    submitShowtimeDateForm();
   }
 }
 

@@ -1,7 +1,7 @@
 class CreateShowtimes < ActiveRecord::Migration
   def change
     create_table :showtimes do |t|
-      t.time :start_time
+      t.datetime :start_time
       t.references :theater, index: true
       t.references :movie, index: true
 

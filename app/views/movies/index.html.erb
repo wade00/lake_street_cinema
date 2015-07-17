@@ -2,6 +2,19 @@
   <div class="row col-xs-12 text-center now-showing-header">
     <h2>Now Showing</h2>
   </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(movies_path, method: :get, html: { class: "select-showtime-date-form",
+                                                      id: "select-showtime-date-form" }) do |f| %>
+        <%= f.select :date, [], {}, { class: "form-control select-showtime-date", id: "select-showtime-date" } do %>
+          <% 7.times do |n| %>
+            <%= content_tag(:option, "Showtimes for #{n.days.from_now.strftime("%A, %B %e, %Y")}",
+            value: n.days.from_now.strftime("%e")) %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
   <div class="row movies-container">
     <% @movies.each do |movie| %>
       <div class="col-md-4 movie-thumbnail" id="movie-<%= movie.id %>">
@@ -12,17 +25,35 @@
             <div class="showtime-index" id="movie-<%= movie.id %>-showtimes">
               <h4>Showtimes</h4>
               <% movie.showtimes.each do |showtime| %>
-                <div class="col-xs-6">
-                  <p>
-                    <% if sold_out(showtime) %>
-                      <span class="sold-out-showtime">Sold Out</span>
-                    <% else %>
-                      <%= link_to movie_showtime_path(movie, showtime), class: "showtime-link" do %>
-                        <%= to_strftime(showtime) %>
-                      <% end %>
-                    <% end %>
-                  </p>
-                </div>
+                <% if params[movies_path].nil? %>
+                  <% if showtime.start_time.day == Date.today.day %>
+                    <div class="col-xs-6">
+                      <p>
+                        <% if sold_out(showtime) %>
+                          <span class="sold-out-showtime">Sold Out</span>
+                        <% else %>
+                          <%= link_to movie_showtime_path(movie, showtime), class: "showtime-link" do %>
+                            <%= to_strftime(showtime) %>
+                          <% end %>
+                        <% end %>
+                      </p>
+                    </div>
+                  <% end %>
+                <% else %>
+                  <% if showtime.start_time.day == params[movies_path][:date] %>
+                    <div class="col-xs-6">
+                      <p>
+                        <% if sold_out(showtime) %>
+                          <span class="sold-out-showtime">Sold Out</span>
+                        <% else %>
+                          <%= link_to movie_showtime_path(movie, showtime), class: "showtime-link" do %>
+                            <%= to_strftime(showtime) %>
+                          <% end %>
+                        <% end %>
+                      </p>
+                    </div>
+                  <% end %>
+                <% end %>
               <% end %>
             </div>
           </div>

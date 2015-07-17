@@ -8,3 +8,15 @@ function displayShowtimes() {
     $('#' + id + '-showtimes').fadeOut();
   });
 }
+
+function fadeInMovieTiles() {
+  setTimeout(function() {
+    $('.movie-thumbnail').fadeIn(1000);
+  }, 500);
+}
+
+function submitShowtimeDateForm() {
+  $('#select-showtime-date').change(function() {
+    $('#select-showtime-date-form').submit();
+  });
+}
