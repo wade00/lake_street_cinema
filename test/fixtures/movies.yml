@@ -1,23 +1,23 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title,: MyString
-  year,: MyString
-  director,: MyString
-  runtime: 
-  genre,: MyString
-  rating,: MyString
-  synopsis: 
-  image,: MyString
-  theater_id: 
+forrest_gump:
+  title: Forrest Gump
+  year: 1994
+  director: Robert Zimeckis
+  runtime: 142
+  genre: Drama
+  rating: PG-13
+  synopsis: Forrest Gump while not intelligent has accidentally been present at many historic moments but his true love Jenny Curran eludes him.
+  image: http://cdn.gowatchit.com/posters/original/ForrestGump.jpg
+  theater:
 
-two:
-  title,: MyString
-  year,: MyString
-  director,: MyString
-  runtime: 
-  genre,: MyString
-  rating,: MyString
-  synopsis: 
-  image,: MyString
-  theater_id: 
+intersellar:
+  title: Intersellar
+  year: 2014
+  director: Christopher Nolan
+  runtime: 169
+  genre: Adventure
+  rating: PG-13
+  synopsis: A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.
+  image: http://antedote.com/wp-content/uploads/2014/12/interstellar-poster.jpg
+  theater:

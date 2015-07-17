@@ -1,15 +1,31 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  email,: MyString
-  credit_card,: MyString
-  movie: 
-  theater: 
-  showtime_id: 
+derek:
+  email: derek@example.com
+  credit_card: 1234123412341234
+  name: Derek Greenlee
+  card_expiration_month: 03
+  card_expiration_year: 2018
+  street_address: 1542 N. Oakley Blvd.
+  city: Chicago
+  state: Illinois
+  zip_code: 60622
+  country: United States
+  movie:
+  theater:
+  showtime:
 
-two:
-  email,: MyString
-  credit_card,: MyString
-  movie: 
-  theater: 
-  showtime_id: 
+stu:
+  email: stu@example.net
+  credit_card: 123512351235123
+  name: Stu Nordquist
+  card_expiration_month: 01
+  card_expiration_year: 2017
+  street_address: 2025 W. Superior St.
+  city: Seattle
+  state: Washington
+  zip_code: 99201
+  country: United States
+  movie:
+  theater:
+  showtime:
