@@ -7,7 +7,7 @@
     </div>
     <div class="col-md-8 showtime-summary">
       <h3>
-        <%= to_strftime(@showtime) %> showing for <%= @movie.title %> (<%= @movie.rating %>)
+        <%= @showtime.start_time.strftime("%A") %> <%= to_strftime(@showtime) %> showing for <%= @movie.title %> (<%= @movie.rating %>)
       </h3>
       <p>
         Director: <%= @movie.director %> | Genre: <%= @movie.genre %> | Runtime: <%= @movie.runtime %> min

@@ -12,11 +12,10 @@
 }
 
 .movies-container {
-  height: 100vh;
+  display: none;
 }
 
 .movie-thumbnail {
-  display: none;
   margin: 0px;
   padding: 0px;
   img {

@@ -1,0 +1,28 @@
+<div class="movie-thumbnail-image-index text-center">
+  <%= image_tag movie.image, alt: movie.title, class: "movie-image" %>
+  <div class="movie-showtime-info">
+    <h4 id="<%= dom_id movie %>_title"><%= movie.title %></h4>
+    <div class="showtime-index" id="<%= dom_id movie %>_showtimes">
+      <h4>Showtimes</h4>
+      <% if showtimes.empty? %>
+        <p>No showtimes scheduled today</p>
+      <% else %>
+        <% showtimes.each do |showtime| %>
+          <% if showtime.movie == movie %>
+            <div class="col-xs-6">
+              <p>
+                <% if sold_out(showtime) %>
+                  <span class="sold-out-showtime">Sold Out</span>
+                <% else %>
+                  <%= link_to movie_showtime_path(movie, showtime), class: "showtime-link" do %>
+                    <%= to_strftime(showtime) %>
+                  <% end %>
+                <% end %>
+              </p>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

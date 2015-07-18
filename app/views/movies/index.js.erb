@@ -1,0 +1,6 @@
+<% @movies.each do |movie| %>
+  $('#<%= dom_id movie %>').html('<%= escape_javascript(render 'movie_thumbnail',
+                                                                     movie: movie, showtimes: @showtimes) %>');
+<% end %>
+
+$('.movies-container').animate({ opacity: '100' }, 1000);
