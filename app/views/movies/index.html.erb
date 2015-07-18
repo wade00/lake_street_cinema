@@ -24,35 +24,19 @@
             <h4 id="movie-<%= movie.id %>-title"><%= movie.title %></h4>
             <div class="showtime-index" id="movie-<%= movie.id %>-showtimes">
               <h4>Showtimes</h4>
-              <% movie.showtimes.each do |showtime| %>
-                <% if params[movies_path].nil? %>
-                  <% if showtime.start_time.day == Date.today.day %>
-                    <div class="col-xs-6">
-                      <p>
-                        <% if sold_out(showtime) %>
-                          <span class="sold-out-showtime">Sold Out</span>
-                        <% else %>
-                          <%= link_to movie_showtime_path(movie, showtime), class: "showtime-link" do %>
-                            <%= to_strftime(showtime) %>
-                          <% end %>
+              <% @showtimes.each do |showtime| %>
+                <% if showtime.movie == movie %>
+                  <div class="col-xs-6">
+                    <p>
+                      <% if sold_out(showtime) %>
+                        <span class="sold-out-showtime">Sold Out</span>
+                      <% else %>
+                        <%= link_to movie_showtime_path(movie, showtime), class: "showtime-link" do %>
+                          <%= to_strftime(showtime) %>
                         <% end %>
-                      </p>
-                    </div>
-                  <% end %>
-                <% else %>
-                  <% if showtime.start_time.day == params[movies_path][:date] %>
-                    <div class="col-xs-6">
-                      <p>
-                        <% if sold_out(showtime) %>
-                          <span class="sold-out-showtime">Sold Out</span>
-                        <% else %>
-                          <%= link_to movie_showtime_path(movie, showtime), class: "showtime-link" do %>
-                            <%= to_strftime(showtime) %>
-                          <% end %>
-                        <% end %>
-                      </p>
-                    </div>
-                  <% end %>
+                      <% end %>
+                    </p>
+                  </div>
                 <% end %>
               <% end %>
             </div>

@@ -3,6 +3,12 @@ class MoviesController < ApplicationController
 
   def index
     @movies = Movie.order(:title)
+    if params[movies_path]
+      date = params[movies_path][:date].to_datetime
+      @showtimes = Showtime.where(start_time: ((date.beginning_of_day)..(date.end_of_day)))
+    else
+      @showtimes = Showtime.where(start_time: ((Date.today.beginning_of_day)..(Date.today.end_of_day)))
+    end
   end
 
   def show
