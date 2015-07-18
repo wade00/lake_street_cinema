@@ -1,6 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-derek:
+dereks_order:
   email: derek@example.com
   credit_card: 1234123412341234
   name: Derek Greenlee
@@ -11,11 +11,12 @@ derek:
   state: Illinois
   zip_code: 60622
   country: United States
-  movie:
-  theater:
-  showtime:
+  movie: forrest_gump
+  theater: theater_one
+  showtime: today_showtime
+  tickets: 50
 
-stu:
+stus_order:
   email: stu@example.net
   credit_card: 123512351235123
   name: Stu Nordquist
@@ -26,6 +27,7 @@ stu:
   state: Washington
   zip_code: 99201
   country: United States
-  movie:
-  theater:
-  showtime:
+  movie: interstellar
+  theater: theater_two
+  showtime: tomorrow_showtime
+  tickets: 20

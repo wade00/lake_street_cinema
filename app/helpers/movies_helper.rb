@@ -20,9 +20,9 @@ module MoviesHelper
 
       case movie.rating
       when "PG-13"
-        13.years.ago.to_time < birthdate_time ? false : true
+        13.years.ago.to_time >= birthdate_time ? true : false
       when "R"
-        17.years.ago.to_time < birthdate_time ? false : true
+        17.years.ago.to_time >= birthdate_time ? true : false
       end
     end
   end

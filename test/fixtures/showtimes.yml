@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  start_time:
-  movie:
-  theater_id:
+today_showtime:
+  start_time: <%= Time.now %>
+  movie: forrest_gump
+  theater: theater_one
 
-two:
-  start_time:
-  movie:
-  theater_id:
+tomorrow_showtime:
+  start_time: <%= Time.now + 1.day %>
+  movie: interstellar
+  theater: theater_two

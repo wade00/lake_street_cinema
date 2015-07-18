@@ -15,7 +15,7 @@ module OrdersHelper
   end
 
   def order_tax(showtime, num_of_tickets)
-    order_subtotal(showtime, num_of_tickets) * 0.0975
+    (order_subtotal(showtime, num_of_tickets) * 0.0975).round(2)
   end
 
   def order_total(showtime, num_of_tickets)
