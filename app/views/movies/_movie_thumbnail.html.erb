@@ -15,7 +15,7 @@
                   <span class="sold-out-showtime">Sold Out</span>
                 <% else %>
                   <%= link_to movie_showtime_path(movie, showtime), class: "showtime-link" do %>
-                    <%= format_showtime(showtime) %>
+                    <%= format_showtime_without_day(showtime) %>
                   <% end %>
                 <% end %>
               </p>
