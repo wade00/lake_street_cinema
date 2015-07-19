@@ -6,10 +6,6 @@ class OrdersController < ApplicationController
     @movies = Movie.order(:title)
   end
 
-  def new
-    @order = Order.new
-  end
-
   def create
     @order = Order.new(order_params)
 
