@@ -1,7 +1,8 @@
 module ShowtimesHelper
-  def to_strftime(showtime)
-    showtime.start_time.hour < 12 ? "#{showtime.start_time.strftime("%-l:%M")}am" :
-                                    "#{showtime.start_time.strftime("%-l:%M")}pm"
+  def format_showtime(showtime)
+    showtime.start_time.hour < 12 ?
+    "#{showtime.start_time.strftime("%A")} #{showtime.start_time.strftime("%-l:%M")}am" :
+    "#{showtime.start_time.strftime("%A")} #{showtime.start_time.strftime("%-l:%M")}pm"
   end
 
   def sold_out(showtime)

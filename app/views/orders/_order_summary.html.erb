@@ -12,7 +12,8 @@
       <div class="row">
         <div class="col-xs-12">
           <p>
-            Theater number <%= @order.theater.number %> at <strong><%= to_strftime(@order.showtime) %></strong>
+            Theater number <%= @order.theater.number %> at
+            <strong><%= format_showtime(@order.showtime) %></strong>
             <span class="pull-right"><%= number_to_currency(ticket_price(@order.showtime)) %> each</span>
           </p>
         </div>

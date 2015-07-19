@@ -17,6 +17,13 @@
     display: inline-block;
     margin: 10px;
   }
+  a {
+    color: $red;
+    &:hover {
+      color: darken($red, 20%);
+      text-decoration: none;
+    }
+  }
 }
 
 .no-orders-message {
@@ -34,4 +41,66 @@
 
 .back-to-movies-button {
   margin-top: 20px;
+}
+
+.order-table-cell {
+  overflow: hidden;
+}
+.order-table-link {
+  color: #000;
+  margin: -300px;
+  padding: 300px;
+  &:hover {
+    color: #000;
+    text-decoration: none;
+  }
+}
+
+/* Responsive table */
+
+$table-breakpoint: 1000px;
+
+.orders-table {
+  margin: 1em 0;
+  min-width: 300px;
+  tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    display: none;
+  }
+  td {
+    display: block;
+    overflow: hidden;
+    &:first-child {
+      padding-top: .5em;
+    }
+    &:last-child {
+      padding-bottom: .5em;
+    }
+    &:before {
+      content: attr(data-th)": ";
+      font-weight: bold;
+      width: 6.5em;
+      display: inline-block;
+      @media (min-width: $table-breakpoint) {
+        display: none;
+      }
+    }
+  }
+
+  th, td {
+    text-align: left;
+    @media (min-width: $table-breakpoint) {
+      display: table-cell;
+      padding: .25em .5em;
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
 }

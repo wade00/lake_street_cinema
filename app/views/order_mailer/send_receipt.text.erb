@@ -14,7 +14,7 @@ Your order information:
   <%= @order.tickets %> ticket for
 <% end %>
 <%= @order.movie.title %>
-Theater number <%= @order.theater.number %> at <strong><%= to_strftime(@order.showtime) %>
+Theater number <%= @order.theater.number %> at <%= format_showtime(@order.showtime) %>
 <%= number_to_currency(ticket_price(@order.showtime)) %> each
 ----------------------------------------------------------------
 
