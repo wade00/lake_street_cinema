@@ -206,7 +206,7 @@ movie10 = Movie.find_by(title: "Pi")
 # Showtimes
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 10:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 10:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater1
   showtime.movie = movie1
@@ -215,7 +215,7 @@ movie10 = Movie.find_by(title: "Pi")
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 13:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 13:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater1
   showtime.movie = movie1
@@ -224,7 +224,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 16:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 16:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater1
   showtime.movie = movie1
@@ -233,7 +233,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 19:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 19:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater1
   showtime.movie = movie1
@@ -242,7 +242,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 22:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 22:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater1
   showtime.movie = movie1
@@ -251,7 +251,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 10:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 10:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater2
   showtime.movie = movie2
@@ -260,7 +260,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 13:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 13:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater2
   showtime.movie = movie2
@@ -269,7 +269,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 16:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 16:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater2
   showtime.movie = movie2
@@ -278,7 +278,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 19:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 19:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater2
   showtime.movie = movie2
@@ -287,7 +287,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 22:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 22:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater2
   showtime.movie = movie2
@@ -296,7 +296,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 10:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 10:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater3
   showtime.movie = movie3
@@ -305,7 +305,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 13:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 13:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater3
   showtime.movie = movie3
@@ -314,7 +314,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 16:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 16:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater3
   showtime.movie = movie3
@@ -323,7 +323,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 19:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 19:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater3
   showtime.movie = movie3
@@ -332,7 +332,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 22:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 22:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater3
   showtime.movie = movie3
@@ -341,7 +341,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 10:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 10:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater4
   showtime.movie = movie4
@@ -350,7 +350,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 13:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 13:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater4
   showtime.movie = movie4
@@ -359,7 +359,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 16:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 16:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater4
   showtime.movie = movie4
@@ -368,7 +368,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 19:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 19:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater4
   showtime.movie = movie4
@@ -377,7 +377,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 22:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 22:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater4
   showtime.movie = movie4
@@ -386,7 +386,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 10:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 10:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater5
   showtime.movie = movie5
@@ -395,7 +395,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 13:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 13:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater5
   showtime.movie = movie5
@@ -404,7 +404,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 16:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 16:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater5
   showtime.movie = movie5
@@ -413,7 +413,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 19:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 19:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater5
   showtime.movie = movie5
@@ -422,7 +422,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 22:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 22:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater5
   showtime.movie = movie5
@@ -431,7 +431,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 10:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 10:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater6
   showtime.movie = movie6
@@ -440,7 +440,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 13:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 13:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater6
   showtime.movie = movie6
@@ -449,7 +449,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 16:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 16:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater6
   showtime.movie = movie6
@@ -458,7 +458,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 19:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 19:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater6
   showtime.movie = movie6
@@ -467,7 +467,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 22:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 22:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater6
   showtime.movie = movie6
@@ -476,7 +476,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 10:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 10:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater7
   showtime.movie = movie7
@@ -485,7 +485,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 13:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 13:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater7
   showtime.movie = movie7
@@ -494,7 +494,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 16:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 16:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater7
   showtime.movie = movie7
@@ -503,7 +503,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 19:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 19:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater7
   showtime.movie = movie7
@@ -512,7 +512,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 22:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 22:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater7
   showtime.movie = movie7
@@ -521,7 +521,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 10:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 10:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater8
   showtime.movie = movie8
@@ -530,7 +530,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 13:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 13:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater8
   showtime.movie = movie8
@@ -539,7 +539,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 16:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 16:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater8
   showtime.movie = movie8
@@ -548,7 +548,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 19:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 19:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater8
   showtime.movie = movie8
@@ -557,7 +557,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 22:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 22:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater8
   showtime.movie = movie8
@@ -566,7 +566,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 10:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 10:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater9
   showtime.movie = movie9
@@ -575,7 +575,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 13:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 13:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater9
   showtime.movie = movie9
@@ -584,7 +584,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 16:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 16:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater9
   showtime.movie = movie9
@@ -593,7 +593,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 19:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 19:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater9
   showtime.movie = movie9
@@ -602,7 +602,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 22:00 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 22:00', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater9
   showtime.movie = movie9
@@ -611,7 +611,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 10:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 10:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater10
   showtime.movie = movie10
@@ -620,7 +620,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 13:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 13:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater10
   showtime.movie = movie10
@@ -629,7 +629,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 16:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 16:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater10
   showtime.movie = movie10
@@ -638,7 +638,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 19:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 19:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater10
   showtime.movie = movie10
@@ -647,7 +647,7 @@ end
 end
 
 7.times do |n|
-  dateTimeStart = Time.strptime('07/20/2015 22:30 CDT', '%m/%d/%Y %H:%M %z')
+  dateTimeStart = Time.strptime('07/20/2015 22:30', '%m/%d/%Y %H:%M')
   showtime = Showtime.new
   showtime.theater = theater10
   showtime.movie = movie10
