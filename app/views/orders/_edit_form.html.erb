@@ -31,11 +31,16 @@
 
       <div class="col-xs-6">
         <%= f.select :card_expiration_year, [], { prompt: "Select a year..." }, { class: "form-control" } do %>
-          <% 10.times do |n| %>
-            <%= content_tag(:option, (Time.now.year + 1) + n) %>
+          <% 11.times do |n| %>
+            <%= content_tag(:option, (Time.now.year) + n) %>
           <% end %>
         <% end %>
       </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :cvv, "CVV (3 digits on back of card)", class: "control-label" %>
+      <%= f.text_field :cvv, class: "form-control" %>
     </div>
   </div>
 

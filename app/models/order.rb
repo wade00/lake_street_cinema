@@ -7,6 +7,7 @@ class Order < ActiveRecord::Base
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   VALID_CREDIT_CARD_REGEX = /(^\d{15,16}$)/
   VALID_ZIP_CODE_REGEX = /(^\d{5}$)/
+  VALID_CVV_REGEX = /(^\d{3}$)/
 
   validates :email, presence: true,
                     on: :update,
@@ -23,6 +24,11 @@ class Order < ActiveRecord::Base
   validates :name, presence: true, on: :update
   validates :card_expiration_month, presence: true, on: :update
   validates :card_expiration_year,  presence: true, on: :update
+  validates :cvv, presence: true,
+                       on: :update,
+                       length: { maximum: 3 },
+                       format: { with: VALID_CVV_REGEX,
+                                 message: "- CVV should only be 3 digits. No letters or extra numbers please."}
   validates :street_address, presence: true, on: :update
   validates :city, presence: true, on: :update
   validates :state, presence: true, on: :update

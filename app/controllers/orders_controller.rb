@@ -48,7 +48,7 @@ class OrdersController < ApplicationController
 
     def order_params
       params.require(:order).permit(:email, :name, :credit_card, :card_expiration_month, :card_expiration_year,
-                                    :tickets, :street_address, :city, :state, :zip_code, :country,
+                                    :cvv, :tickets, :street_address, :city, :state, :zip_code, :country,
                                     :theater_id, :showtime_id, :movie_id)
     end
 end
