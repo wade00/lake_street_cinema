@@ -8,7 +8,7 @@
                                                       id: "select-showtime-date-form",
                                                       remote: true }) do |f| %>
         <%= f.select :date, [], {}, { class: "form-control select-showtime-date", id: "select-showtime-date" } do %>
-          <% 7.times do |n| %>
+          <% 8.times do |n| %>
             <%= content_tag(:option, "Showtimes for #{n.days.from_now.strftime("%A, %B %e, %Y")}",
             value: n.days.from_now.strftime("%e")) %>
           <% end %>
