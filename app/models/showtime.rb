@@ -1,7 +1,7 @@
 class Showtime < ActiveRecord::Base
   belongs_to :theater
   belongs_to :movie
-  has_many :orders
+  has_many :orders, dependent: :destroy
 
   def seats_remaining
     ticket_count = []
