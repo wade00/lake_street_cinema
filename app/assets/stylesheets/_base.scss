@@ -11,13 +11,6 @@ body {
 }
 
 .header-logo {
-  a {
-    color: $red;
-    &:hover {
-      text-decoration: none;
-      color: darken($red, 20%);
-    }
-  }
   h1 {
     font-family: 'Lora', 'serif';
     font-weight: 300;
@@ -33,13 +26,6 @@ body {
   li {
     display: inline-block;
     margin-right: 20px;
-    a {
-      color: $red;
-      &:hover {
-        text-decoration: none;
-        color: darken($red, 20%);
-      }
-    }
   }
 }
 
@@ -52,14 +38,15 @@ footer {
 
 a {
   color: $red;
-  &:hover {
-    text-decoration: none;
+  &:hover, &:focus {
     color: darken($red, 20%);
+    text-decoration: none;
   }
 }
+
 .btn {
-  border-radius: 0px;
   border: 0px;
+  border-radius: 0px;
 }
 
 .btn-primary {

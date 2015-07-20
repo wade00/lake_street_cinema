@@ -18,26 +18,19 @@
     display: inline-block;
     margin: 10px;
   }
-  a {
-    color: $red;
-    &:hover {
-      color: darken($red, 20%);
-      text-decoration: none;
-    }
-  }
 }
 
 .no-orders-message {
+  left: 40%;
   position: absolute;
   top: 150px;
-  left: 40%;
   width: 20%;
 }
 
 .order-summary {
   background: $yellow;
-  padding: 10px;
   margin: -20px 0 0 0;
+  padding: 10px;
 }
 
 .back-to-movies-button {
@@ -47,6 +40,7 @@
 .order-table-cell {
   overflow: hidden;
 }
+
 .order-table-link {
   color: #000;
   margin: -300px;
@@ -65,8 +59,8 @@ $table-breakpoint: 1000px;
   margin: 1em 0;
   min-width: 300px;
   tr {
-    border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
   }
   th {
     display: none;
@@ -83,8 +77,8 @@ $table-breakpoint: 1000px;
     &:before {
       content: attr(data-th)": ";
       font-weight: bold;
-      width: 6.5em;
       display: inline-block;
+      width: 6.5em;
       @media (min-width: $table-breakpoint) {
         display: none;
       }

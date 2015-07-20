@@ -5,6 +5,8 @@
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
+  // Layout
+
   .header-logo {
     h1 {
       font-size: 72px;
@@ -14,6 +16,8 @@
     }
   }
 
+  // Movies
+
   .now-showing-header {
     h2 {
       font-size: 60px;
@@ -21,8 +25,8 @@
   }
 
   .select-showtime-date {
-    height: 60px;
     font-size: 28px;
+    height: 60px;
   }
 
   .movie-thumbnail-image-index {
@@ -41,46 +45,7 @@
     }
   }
 
-  .add-ticket-button,
-  .submit-ticket-order-button,
-  .back-to-movies-button {
-    width: 100%;
-    margin: 10px 0;
-    font-size: 60px;
-  }
-
-  .edit-order-page {
-    font-size: 28px;
-  }
-
-  .showtime-summary {
-    font-size: 28px;
-    p {
-      margin: 50px 0;
-    }
-    select {
-      height: 60px;
-      font-size: 28px;
-    }
-  }
-
-  .edit-ticket-order-form {
-    input {
-      height: 60px;
-    }
-    select {
-      height: 60px;
-      font-size: 28px;
-    }
-    .submit-ticket-order-button {
-      height: 100px;
-      margin-bottom: 50px;
-    }
-  }
-
-  .order-summary {
-    font-size: 28px;
-  }
+  // Showtime
 
   .verify-age-modal {
     font-size: 28px;
@@ -109,6 +74,41 @@
     }
   }
 
+  // Orders
+
+  .edit-order-page {
+    font-size: 28px;
+  }
+
+  .showtime-summary {
+    font-size: 28px;
+    p {
+      margin: 50px 0;
+    }
+    select {
+      font-size: 28px;
+      height: 60px;
+    }
+  }
+
+  .edit-ticket-order-form {
+    input {
+      height: 60px;
+    }
+    select {
+      font-size: 28px;
+      height: 60px;
+    }
+    .submit-ticket-order-button {
+      height: 100px;
+      margin-bottom: 50px;
+    }
+  }
+
+  .order-summary {
+    font-size: 28px;
+  }
+
   .orders-index-header {
     p {
       font-size: 44px;
@@ -129,4 +129,14 @@
     font-size: 32px;
   }
 }
+
+// Misc Utility
+
+  .add-ticket-button,
+  .submit-ticket-order-button,
+  .back-to-movies-button {
+    font-size: 60px;
+    margin: 10px 0;
+    width: 100%;
+  }
 

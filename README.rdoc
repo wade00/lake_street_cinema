@@ -1,28 +1,41 @@
-== README
+== Lake Street Cinema
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Created by me, Wade Novak. It was a lot of fun and here's what I've learned:
 
-Things you may want to cover:
+When I set out to build an online ticketing app the first things I did were:
 
-* Ruby version
+1. Outline the main job for the app.
+2. Sketch out the basic flow for purchasing tickets for a showing of a specific movie.
+3. Build out models and associations.
 
-* System dependencies
+The job for app users is pretty straightforward: find and purchase tickets to a movie screening for a specific time, date and movie.
 
-* Configuration
+Here’s a picture of a flow I sketched out, which helped me breakdown the models and associations necessary to build the app.
 
-* Database creation
+I ended up breaking things down into 4 models: movies, showtimes, theaters and orders. The movie model contains all of the relevant info for a movie goer like runtime and rating, while the theater model only contains a theater number and the its capacity. A showtime is associated with a movie and a theater so that I have access to the movie’s info and the theater capacity, which helped me build out the logic for a ‘sold out’ showing. The order model is a separate beast which I’ll get to in a bit.
 
-* Database initialization
+Let’s jump into the ticket purchase flow to get a better look at the models and associations.
 
-* How to run the test suite
+The home page is a list of movies that display showtimes when you hover over their movie poster image. A user can choose the date they want and that date’s showtimes populate the movies index page through an ajax call. From there a user can click a showtime and enter the showtime#show page where they can purchase tickets to a showing. However, if the movie.rating is 'PG-13’ or ‘R’ the verify_age method is triggered, which launches a modal that requires the user to enter their date of birth. That form is submitted using a GET request to the showtime#show page and the data that comes through in the params hash is intercepted by the age_check_passes? helper method. If movie isn’t ‘PG-13’ or ‘R’ then the expected params hash is nil, and the method return true. If it’s not nil then submitted date is evaluated against the date 17 years ago and 13 years ago depending on the movie rating. If the method returns false a user isn’t able to buy tickets.
 
-* Services (job queues, cache servers, search engines, etc.)
+You’ll notice that a user can only select as many tickets as there are seats left in the theater. This is done using the seats_remaining method declared in the showtime.rb file. This method tallies up the tickets in orders associated with the showtime and theater and subtracts it from the theater’s capacity.
 
-* Deployment instructions
+When a user clicks ‘order tickets’ a new order is submitted and saved to the database. From there they’re redirected to the edit order page where they complete all of the required fields before submitting a PATCH request via the update action in the orders controller. Structuring the flow like this allowed me to give the user an order summary with a price total before actually entering all of their credit card information. This flow feels more natural and asks less of the user off the bat than if the credit card field were on the previous page.  If the users wants to abandon their order the can click ‘cancel order’ which deletes the order from the database.
 
-* ...
+The ticket prices were determined based on time of day in an orders helper method. That file also contains the logic for calculating totals and adding Chicago’s great 9.75% tax rate.
 
+Once the user submits their information their info is evaluated against all validations in the order.rb model file. Each field is required for a valid submission so at the very least each table column has a presence: true validation. Somethings like email, credit card, zip code and cvv have format validations that limit the number of characters and also exclude some character types. Those formats are tested against simple REGEXs and have custom error messages. The form isn’t perfect, but it will catch a lot of errors at the moment. With some more time I would add some format validations to the address fields and add a select tag for state and country.
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+The user receives a confirmation email once their order is successfully submitted. This is achieved on the backend using the Mailgun add-on through Heroku. The template is pretty basic but has some styling to fit the design of the website. I was using Gmail up until the very last minute when suddenly Google started sending me emails about suspicious activity on my account :). Good thing Mailgun is simple to use!
+
+Thus concludes the basic flow of purchasing a ticket! One of the harder challenges for me was getting timezones for movie showtimes to work in development versus production. The final solution was to save the seed file data as UTC (the standard) but configure my Heroku app to run on central time zone. The seeds file showtimes take into account the time difference. In general dealing with dates and times proved to be difficult and adding the date picker on the movies#index page was one of my biggest obstacles. You can see the logic I used to serve the correct showtimes in the movies controller file. While difficult at first, it was crucial to have because people buy tickets in advance of a movie all the time!
+
+The only other active pages on the app are the order summaries. I have two stub links for ‘about us' and 'contact us', but didn’t have time to build them out. The orders page is a very simple, but responsive table (a neat trick I came across when googling around for responsive tables). I think the table format works best for this type of date so to able to implement it on mobile is really nice. The header link takes you to orders#index page, but from there you can click ‘view orders by movie’, which displays the list of movies. The link will take you to that movie’s orders. Right now there is no blank slate if the movie has no orders, but that’s something that would need to be implemented.
+
+I began doing test coverage but didn’t get to integration testing. I would plan to do that right away. It’s a topic I’m familiar with, but new to and it wasn’t a great use of my time to try and figure out how to do it well. The helper methods and controllers have basic test coverage, though.
+
+That concludes the tour of my app. I hope you’ve enjoyed it! I tried to give it some neat visuals that make it fun to be on the website. Here are the initial sketches which I stuck pretty close to in the end.
+
+Now please feel free to play around in the code base and check out the dusty corners. I look forward to hearing from you guys.
+
+- Wade
