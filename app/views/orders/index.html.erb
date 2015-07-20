@@ -1,17 +1,18 @@
 <div class="container">
-  <div class="row text-center orders-index-header">
-    <p>View orders by movie</p>
-    <ul class="movie-order-review-list">
-      <% @movies.each do |movie| %>
-        <li><%= link_to movie.title, movie_order_review_path(movie), class: "movie-review-link" %></li>
-      <% end %>
-    </ul>
-  </div>
-
-  <hr />
 
   <div class="row text-center orders-table-type-header">
     <h3>All Orders</h3>
+
+    <div class="row orders-index-header">
+      <p>
+        <%= link_to "View orders by movie", "#", id: "view-orders-by-movie" %>
+      </p>
+      <ul class="movie-order-review-list">
+        <% @movies.each do |movie| %>
+          <li><%= link_to movie.title, movie_order_review_path(movie), class: "movie-review-link" %></li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 
   <div class="row">
@@ -54,7 +55,8 @@
       <% end %>
     </table>
   </div>
-  <div class="orders-actions text-center">
-    <%= link_to "Back to movies", movies_path, class: "btn btn-primary back-to-movies-button" %>
+
+  <div class="row text-center">
+    <p><%= link_to "<< Back to Movies", movies_path %></p>
   </div>
 </div>

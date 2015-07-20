@@ -27,9 +27,12 @@
       <% else %>
         <div class="not-old-enough-message">
           <h4>Sorry, you're not old enough to see this movie!</h4>
-          <%= link_to "Back to movies", movies_path, class: "btn btn-primary back-to-movies-button"  %>
         </div>
       <% end %>
     </div>
+  </div>
+
+  <div class="row text-center">
+    <p><%= link_to "<< Back to Movies", movies_path %></p>
   </div>
 </div>

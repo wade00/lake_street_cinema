@@ -5,10 +5,24 @@
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
+  .header-logo {
+    h1 {
+      font-size: 72px;
+    }
+    li {
+      font-size: 28px;
+    }
+  }
+
   .now-showing-header {
     h2 {
       font-size: 60px;
     }
+  }
+
+  .select-showtime-date {
+    height: 60px;
+    font-size: 28px;
   }
 
   .movie-thumbnail-image-index {
@@ -16,6 +30,12 @@
     h4 {
       font-size: 80px;
     }
+    p {
+      font-size: 60px;
+    }
+  }
+
+  .movie-showtime-info {
     p {
       font-size: 60px;
     }
@@ -59,7 +79,7 @@
   }
 
   .order-summary {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .verify-age-modal {

@@ -1,5 +1,6 @@
 body {
   background: $lightgrey;
+  font-family: 'Open Sans', 'Helvetica', 'sans-serif';
   padding: 20px;
 }
 
@@ -10,8 +11,15 @@ body {
 }
 
 .header-logo {
-  color: $red;
+  a {
+    color: $red;
+    &:hover {
+      text-decoration: none;
+      color: darken($red, 20%);
+    }
+  }
   h1 {
+    font-family: 'Lora', 'serif';
     font-weight: 300;
   }
   hr {
@@ -21,6 +29,7 @@ body {
 
 .nav-links {
   list-style: none;
+  padding: 0px;
   li {
     display: inline-block;
     margin-right: 20px;
@@ -34,6 +43,20 @@ body {
   }
 }
 
+footer {
+  margin: 50px 0;
+}
+
+
+/* Utility classes */
+
+a {
+  color: $red;
+  &:hover {
+    text-decoration: none;
+    color: darken($red, 20%);
+  }
+}
 .btn {
   border-radius: 0px;
   border: 0px;
@@ -42,7 +65,7 @@ body {
 .btn-primary {
   background: $red;
   border-bottom: 2px solid darken($red, 10%);
-  &:hover {
+  &:hover, &:focus {
     background: darken($red, 10%);
     border-bottom: 2px solid $red;
   }

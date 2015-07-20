@@ -9,6 +9,7 @@ ready = function() {
   setupBase();
   setupShowtimes();
   setupMovies();
+  setupOrders();
 };
 
 $(document).ready(ready);
@@ -25,6 +26,12 @@ function setupMovies() {
     fadeInMovieTiles();
     displayShowtimes();
     submitShowtimeDateForm();
+  }
+}
+
+function setupOrders() {
+  if ($('.orders-table').length > 0) {
+    showOrdersByMovies();
   }
 }
 
